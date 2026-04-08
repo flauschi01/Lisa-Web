@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kreative Lebensberatung</title>
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+
+
+<body>
+
+<div class="burger" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<nav id="menu" >
+
+  <a href="#about">Über mich</a>
+  <a href="#services">Angebote</a>
+  <a href="#contact">Kontakt</a>
+  <a href="#">Infos</a>
+
+</nav>
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+  document.querySelector(".burger").classList.toggle("active");
+}
+</script>
+
+
+<header>
+  <div class="container header-inner">
+    <h1>LICHTBLICK</h1>
+    <h3>Deine kreative Alltagsbegleitung</h3>
+
+    <div class="burger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="menu">
+      <a href="#about">Über mich</a>
+      <a href="#services">Angebote</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+
+  <!-- Video Hintergrund -->
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="video.mp4" type="video/mp4">
+  </video>
+
+  <!-- Overlay -->
+  <div class="hero-overlay"></div>
+
+  <!-- Inhalt -->
+  <div class="hero-content">
+    <h2>Danke für deine Nachricht</h2>
+    <p>Ich werde mich bei dir melden!</p>
+    <button onclick="scrollToSection()">Mehr erfahren</button>
+  </div>
+
+</section>
+
+<section id="about" class="section light">
+  <div class="container">
+    <h2>Über mich</h2>
+    <p>
+      Ich begleite dich auf deinem Weg zu mehr Klarheit, innerer Ruhe und kreativer Entfaltung.
+    </p>
+  </div>
+</section>
+
+<section id="services" class="section">
+  <div class="container">
+    <h2>Meine Angebote</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Einzelberatung</h3>
+        <p>Individuelle Begleitung für deine Themen.</p>
+      </div>
+      <div class="card">
+        <h3>Kreativ-Workshops</h3>
+        <p>Entfalte deinen Ausdruck durch Kunst.</p>
+      </div>
+      <div class="card">
+        <h3>Online-Kurse</h3>
+        <p>Lerne flexibel und in deinem Tempo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <blockquote>
+    „In dir liegt alles, was du brauchst.“
+  </blockquote>
+</section>
+
+<section id="contact" class="section light">
+  <div class="container">
+    <h2>Kontakt</h2>
+    <form action="https://formsubmit.co/florian.lauroesch@gmx.net" method='post' class='contact-form'>
+       <!--Honigtopf-->
+        <input type="text" name="_honey" style="display; none;">
+
+      <input type="text" placeholder="Dein Name" name="name"required>
+      <input type="email" placeholder="Deine E-Mail" name="email"required>
+      <textarea placeholder="Deine Nachricht" name="message"rows="5"></textarea>
+      <button type="submit">Absenden</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Kreative Lebensberatung</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

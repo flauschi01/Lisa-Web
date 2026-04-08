@@ -105,20 +105,26 @@ function toggleMenu() {
   <blockquote>
     „In dir liegt alles, was du brauchst.“
   </blockquote>
-</section>
-
 <section id="contact" class="section light">
   <div class="container">
     <h2>Kontakt</h2>
-    <form action="https://formsubmit.co/9bd883f339e8ee9bbe077b1afdea4607" method='post' class='contact-form'>
-      <input type="text" placeholder="Dein Name" required>
-      <input type="email" placeholder="Deine E-Mail" required>
-      <textarea placeholder="Deine Nachricht" rows="5"></textarea>
+    <form action="https://formsubmit.co/florian.lauroesch@gmx.net" method='post' class='contact-form'>
+       <!--Honigtopf-->
+        <input type="text" name="_honey" style="display; none;">
+      <!--Captcha Ciao-->
+      <input type="hidde" name="_captcha" value="false">
+      <!--Successpage-->
+       <input type="hidde" name="_next" value="false">
+
+  
+
+      <input type="text" placeholder="Dein Name" name="name"required>
+      <input type="email" placeholder="Deine E-Mail" name="email"required>
+      <textarea placeholder="Deine Nachricht" name="message"rows="5"></textarea>
       <button type="submit">Absenden</button>
     </form>
   </div>
 </section>
-
 <footer>
   <p>© 2026 Kreative Lebensberatung</p>
 </footer>

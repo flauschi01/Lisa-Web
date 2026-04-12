@@ -10,15 +10,21 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 
 @font-face {
-  font-family: myFont; /* set name */
+  font-family: myfont; /* set name */
   src: url(Gelasio-Regular.woff); /* url of the font */
+}
+@font-face {
+  font-family: myfont2; /* set name */
+  src: url(OpenSans-Regular.woff); /* url of the font */
 }
 
 h2, h3 {
-  font-family: 'OpenSans', serif;
+  font-family: 'myfont2', serif;
 }
 h1{
     font-family: 'myfont', serif;   
@@ -26,7 +32,7 @@ h1{
 }
 body {
   margin: 0;
-  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-family: 'myfont2', 'Arial', sans-serif;
   color: var(--sage);
   line-height: 1.6;
   scroll-behavior: smooth;
@@ -132,10 +138,12 @@ nav a {
 
 .hero button {
   margin-top: 20px;
-  padding: 10px 20px;
-  border: none;
-  background: #c9a27e;
-  color: white;
+  padding: 20px 30px;
+  border-style: solid;
+  border-color: #fab42d;
+  background: none;
+  font-size: 2rem;
+  color: #fab42d;
   cursor: pointer;
 }
 
@@ -222,7 +230,7 @@ textarea{
 }
 
 button {
-  background: #c9a27e;
+  background: #fab42d;
   color: white;
   padding: 10px;
   border: none;
@@ -255,5 +263,4 @@ footer {
   justify-content: center;
   text-align: center;
 }
-
 

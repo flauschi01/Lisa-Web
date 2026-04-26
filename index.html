@@ -37,7 +37,7 @@ function toggleMenu() {
 
 
 <header>   
-    <div class="container header-inner">
+ <div class="container header-inner">
     <div class="social-header">     
     <div class="social">
         <a href="#" class="fa fa-instagram"></a>
@@ -45,10 +45,22 @@ function toggleMenu() {
     </div>
 
     <div class ="title">
-        <h1>LICHTBLICK</h1>
-        <h3>Deine kreative Alltagsbegleitung</h3>
+        <a href="#about"><img src="Logo_Lasi.png"></a>
+        <!--<h1>LICHTBLICK</h1>
+        <h3>Deine kreative Alltagsstütze</h3>-->
     </div>
-</div>
+        <div class="header-bar">
+        <nav id="navbar">
+            <a href="#about">Über mich</a>
+            <a href="#services">Angebote</a>
+            <a href="#contact">Kontakt</a>
+        </nav>
+        </div>
+   
+    </div>
+
+
+    
 
     <div class="burger" onclick="toggleMenu()">
       <span></span>
@@ -76,21 +88,73 @@ function toggleMenu() {
 
   <!-- Inhalt -->
   <div class="hero-content">
-    <h2>Finde deinen inneren Ausdruck</h2>
+    <h2>ERFINDE DICH NEU</h2>
     <p>Raum für Wachstum, Kreativität & Lebensfreude</p>
-    <button onclick="scrollToSection()">Mehr erfahren</button>
+        <a href="http://localhost:8000/Dokumente/Lasa/Test/Shop/#"><button>Deinen Kurs finden</button><a>
   </div>
-
 </section>
 
 <section id="about" class="section light">
   <div class="container">
-    <h2>Über mich</h2>
+    <h2>Über</h2>
     <p>
-      Ich begleite dich auf deinem Weg zu mehr Klarheit, innerer Ruhe und kreativer Entfaltung.
+<br>Na du?<br>
+Geht's dir grade auch so bescheiden?<br>
+Bist du auch so ausgelaugt und erschöpft?<br>
+Fühlst du dich manchmal ungesehen und/oder übergangen?<br>
+Vielleicht sogar ausgeschlossen oder angegriffen?<br>
+Bist du irgendwie so taub oder einfach nur noch richtig sauer und genervt?<br>
+Probierst du vielleicht sogar, das vor Freunden, Kollegen oder der Familie zu verstecken?<br>
+Fühlst du dich alleine gelassen?<br></p>
+<p id="text-right">
+Keine dieser Fragen möchte man wohl auf den ersten Blick mit “gut” oder “angenehm” bewerten.<br>
+Trotzdem kannst du dir sicher sein, dass ein Großteil unserer Gesellschaft sie mit einem “Ja”
+beantworten würde.<br>
+Wir alle leiden mehr oder weniger, lauter oder leiser an den Symptomen unserer Zeit.
+Jede:r auf seine ganz eigene Weise.<br>
+Und manchmal bieten genau diese unangenehmen Zustände eine große Chance, die man in dem
+Moment selbst noch gar nicht erkennen kann.<br>
+Die Chance sich und damit die Welt neu zu erfinden.<br>
+Daran möchte ich mit dir in meinen Kursen arbeiten und dich ganz aktiv dabei unterstützen, dein
+Leben nicht nur “überstehen” zu müssen, sondern deine ganz persönliche Welt entdecken und
+gestalten zu dürfen.<br>
+Ohne dabei etwas zu müssen, aber endlich mal wirklich alles zu dürfen.<br>
+Denn die meisten unserer “Probleme” sind nämlich lösbar, indem du erstmal wieder richtig zu
+dir findest und dabei etwas schaffst, was einfach nur dir gehört und auch nur du verstehst.<br>
+Und mit ein bisschen Unterstützung, bekommst du dann genau an diesem Ort zusätzlich noch
+ein paar ganz neue und andere Blickwinkel auf deine Welt.<br>
     </p>
+<p>Die Chance sich und damit die Welt neu zu erfinden.<br><br>
+Daran möchte ich mit dir in meinen Kursen arbeiten und dich ganz aktiv dabei unterstützen, dein
+Leben nicht nur “überstehen” zu müssen,<br> sondern deine ganz persönliche Welt entdecken und
+gestalten zu dürfen.<br>
+Ohne dabei etwas zu müssen, aber endlich mal wirklich alles zu dürfen.<br>
+Denn die meisten unserer “Probleme” sind nämlich lösbar, indem du erstmal wieder richtig zu
+dir findest und dabei etwas schaffst, was einfach nur dir gehört und auch nur du verstehst.<br>
+Und mit ein bisschen Unterstützung, bekommst du dann genau an diesem Ort zusätzlich noch
+ein paar ganz neue und andere Blickwinkel auf deine Welt.<br>
+Lass uns gemeinsam Zaubern lernen!<br>
+</p>
   </div>
+    <a href="http://localhost:8000/Dokumente/Lasa/Test/Shop/#"><button>Los'</button><a>
 </section>
+
+<!-- Spiel ohne Style bisher -->
+<div class="game">
+
+<h2>Wähle eine Farbe:</h2>
+
+<div id="colors">
+  <button class="color-btn" style="background:red" onclick="showInfo('rot')"></button>
+  <button class="color-btn" style="background:blue" onclick="showInfo('blau')"></button>
+  <button class="color-btn" style="background:green" onclick="showInfo('grün')"></button>
+</div>
+
+<div id="infoBox">
+  <select id="infoDropdown"></select>
+</div>
+
+</div>
 
 <section id="services" class="section">
   <div class="container">
@@ -149,13 +213,13 @@ function toggleMenu() {
 
 <section class="quote">
   <blockquote>
-    „In dir liegt alles, was du brauchst.“
+    „Kunst wäscht den Staub des Alltags von der Seele. - Pablo Picasso“
   </blockquote>
 </section>
 
 
 <section id="contact" class="section light">
-  <div class="container">
+  <div class="contact-container">
     <h2>Kontakt</h2>
     <form action="https://formsubmit.co/florian.lauroesch@gmx.net" method='post' class='contact-form'>
        <!--Honigtopf-->
@@ -170,14 +234,55 @@ function toggleMenu() {
       <input type="text" placeholder="Dein Name" name="name"required>
       <input type="email" placeholder="Deine E-Mail" name="email"required>
       <textarea placeholder="Deine Nachricht" name="message"rows="5"></textarea>
-      <button type="submit">Absenden</button>
+      <button id="submit" type="submit">Absenden</button>
     </form>
   </div>
 
 </section>
-<footer>
-  <p>© 2026 Kreative Lebensberatung</p>
+
+     
+
+
+
+    <footer class="section-p2">
+        <div class="col">
+            <img src="logo" alt="">
+            <h1>Kontakt</h1>
+            <p><strong>Adresse:</strong> Name der Geschäftsadresse</p>
+            <p><strong>Telefon:</strong> Telefonnummer</p>
+            <p><strong>Geschäftszeiten:</strong> Zeiten</p>
+            <div class="follow">
+                <h4>Folge mir</h4>
+                <div class="icon">
+                    <i class="fa fa-facebook-f"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col"id="uber">
+            <h4>Über</h4>
+                <a href="#"><p>Über mich</p></a>
+                <a href="#"><p>Allgemeine Geschäftsbedingungen</p></a>
+                <a href="#"><p>Kontaktiere mich</p></a>
+                <a href="#"><p>Impressum</p></a>
+        </div>
+         <div class="col" id="account">
+            <h4>Account</h4>
+                <a href="#"><p>Einloggen</p></a>
+                <a href="#"><p>Einkaufswagen</p></a>
+                <a href="#"><p>Wunschliste</p></a>
+                <a href="#"><p>Hilfe</p></a>
+        </div>
+        
+
+
+ 
 </footer>
+ 
+<p class="copyright">© 2026 Kreative Lebensberatung</p>
 
 <script src="script.js"></script>
 </body>
+</html>

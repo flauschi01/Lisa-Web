@@ -63,7 +63,7 @@ body {
 /* Weißer Hintergrund */
 section {
   padding: 60px 20px;
-  scroll-margin-top: 250px;
+  scroll-margin-top: 220px;
   
 }
 
@@ -85,6 +85,7 @@ section {
   margin: 6px 0;
   transition: 0.3s;
 }
+
 
 /* Menü */
 #menu {
@@ -127,7 +128,7 @@ section {
 .container {
   max-width: 90%;
   margin: auto;
-  padding: 20px;
+  padding-bottom: 30px;
 }
 
 /* Header */
@@ -138,7 +139,7 @@ header {
 }
 
 .social-header {
-   display: flex;
+  display: flex;
   align-items: center;
   gap: 20px; /* Abstand zwischen allen Elementen */
 }    
@@ -164,11 +165,10 @@ header {
     padding-left: 1em;
 }
 .title img{
+    padding-top: 10px;
     padding-left: 1em;
     max-width: 500px;
-    padding-top: -300px;
-}
-
+    margin:-30px;
 }
 nav a {
    margin: 0 10px;
@@ -247,12 +247,101 @@ nav a {
   background: #f9f6f2;
 }
 
-section.light button{
+
+/* Über mich */
+.main-btn {
+  display: inline-block;
+  margin: 20px auto;
+  padding: 20px 30px;
+  border: 2px solid var(--yellow);
+  background: none;
+  font-size: 2rem;
+  color: var(--yellow);
+  text-decoration: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.main-btn:hover {
+  background: var(--yellow);
+  color: var(--eggshell);
+  transform: translateY(-3px);
+  transition: 0.3s;
+}
+
+#about {
+  text-align: center;
+}
+#about p{
+    text-align: left;
+}
+.about-light{
+    background: #f9f6f2;
+    padding: 60px 60px;
     
 }
 
-/* Über mich */
+.about-dark {
+  text-align: center;
+  background: #efe7df;
+  position:relative;
+  font-size: 30px;
+  width: 100%;
+  padding: 0px 100px;
+}
 
+/*Spiel*/
+
+
+    .farben-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .farb-btn {
+      width: 80px;
+      height: 80px;
+      border: 3px solid #333;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .farb-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+
+    .farb-btn.aktiv {
+      outline: 4px solid #000;
+      outline-offset: 2px;
+    }
+
+    #textfenster {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      min-height: 100px;
+      display: none;
+    }
+
+    #textfenster h2 {
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+
+    #textfenster p {
+      margin: 6px 0;
+      line-height: 1.5;
+    }
+
+    .label {
+      font-weight: 600;
+    }
+  
 
 /* Cards */
 .container h2{
@@ -305,12 +394,15 @@ img.wide-image {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 430px) {
 
 /* changes the grid layout to a single column */
     div.gallery {
         grid-template-columns: 1fr;
     }
+.header-bar{
+    display: none;
+}
 
 /* resets the grid placement properties for 
 the images spanning four grid cells */
@@ -453,6 +545,7 @@ color: var(--sage);
 text-align: center;
 padding-bottom: 20px;
 margin-top: -20px;
+color: var(--dark-sage)
 }
 
 

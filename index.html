@@ -37,8 +37,8 @@ function toggleMenu() {
 
 
 <header>   
- <div class="container header-inner">
-    <div class="social-header">     
+ <div class="container header-inner" id="menub">
+    <div class="social-header" >     
     <div class="social">
         <a href="#" class="fa fa-instagram"></a>
         <a href="#" class="fa fa-twitter"></a>
@@ -59,15 +59,6 @@ function toggleMenu() {
    
     </div>
 
-
-    
-
-    <div class="burger" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
     <nav id="menu">
       <a href="#about">Über mich</a>
       <a href="#services">Angebote</a>
@@ -75,6 +66,49 @@ function toggleMenu() {
     </nav>
   </div>
 </header>
+
+<!--Test Menu query -->
+
+
+<script>
+  window.addEventListener('scroll', function() {
+    const menub = document.getElementById('menub');
+    
+    // Prüfen, ob mehr als 200 Pixel gescrollt wurde
+    if (window.scrollY > 200) {
+      menub.classList.add('is-visible');
+    } else {
+      menub.classList.remove('is-visible');
+    }
+  });
+</script>
+
+<style>
+@media (max-width: 768px) {
+#menub{
+    position:fixed;
+    top: 0;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+}
+#menub.is-visible {
+    opacity: 0;
+    visibility: hidden;
+}
+    #menub {
+        display: block; /* Sicherstellen, dass es auf Mobil da ist */
+    }
+}
+
+
+</style>
+
+
+
+<!--Test Menu query ende-->
 
 <section class="hero">
 
@@ -90,13 +124,14 @@ function toggleMenu() {
   <div class="hero-content">
     <h2>ERFINDE DICH NEU</h2>
     <p>Raum für Wachstum, Kreativität & Lebensfreude</p>
-        <a href="http://localhost:8000/Dokumente/Lasa/Test/Shop/#"><button>Deinen Kurs finden</button><a>
+        <a href="http://localhost:8000/Dokumente/Lasa/Test/Shop/#"><button>Deinen Kurs finden</button></a>
   </div>
 </section>
 
 <section id="about" class="section light">
-  <div class="container">
+  
     <h2>Über</h2>
+<div class="about-light">
     <p>
 <br>Na du?<br>
 Geht's dir grade auch so bescheiden?<br>
@@ -105,11 +140,13 @@ Fühlst du dich manchmal ungesehen und/oder übergangen?<br>
 Vielleicht sogar ausgeschlossen oder angegriffen?<br>
 Bist du irgendwie so taub oder einfach nur noch richtig sauer und genervt?<br>
 Probierst du vielleicht sogar, das vor Freunden, Kollegen oder der Familie zu verstecken?<br>
-Fühlst du dich alleine gelassen?<br></p>
-<p id="text-right">
+Fühlst du dich alleine gelassen?<br>
 Keine dieser Fragen möchte man wohl auf den ersten Blick mit “gut” oder “angenehm” bewerten.<br>
 Trotzdem kannst du dir sicher sein, dass ein Großteil unserer Gesellschaft sie mit einem “Ja”
-beantworten würde.<br>
+beantworten würde.<br></p>
+    </div>
+
+<div class="about-dark"><p>
 Wir alle leiden mehr oder weniger, lauter oder leiser an den Symptomen unserer Zeit.
 Jede:r auf seine ganz eigene Weise.<br>
 Und manchmal bieten genau diese unangenehmen Zustände eine große Chance, die man in dem
@@ -123,8 +160,10 @@ Denn die meisten unserer “Probleme” sind nämlich lösbar, indem du erstmal 
 dir findest und dabei etwas schaffst, was einfach nur dir gehört und auch nur du verstehst.<br>
 Und mit ein bisschen Unterstützung, bekommst du dann genau an diesem Ort zusätzlich noch
 ein paar ganz neue und andere Blickwinkel auf deine Welt.<br>
-    </p>
-<p>Die Chance sich und damit die Welt neu zu erfinden.<br><br>
+Die Chance sich und damit die Welt neu zu erfinden.<br><br></p>
+</div>
+<div class="about-light">
+<p>
 Daran möchte ich mit dir in meinen Kursen arbeiten und dich ganz aktiv dabei unterstützen, dein
 Leben nicht nur “überstehen” zu müssen,<br> sondern deine ganz persönliche Welt entdecken und
 gestalten zu dürfen.<br>
@@ -135,26 +174,107 @@ Und mit ein bisschen Unterstützung, bekommst du dann genau an diesem Ort zusät
 ein paar ganz neue und andere Blickwinkel auf deine Welt.<br>
 Lass uns gemeinsam Zaubern lernen!<br>
 </p>
-  </div>
-    <a href="http://localhost:8000/Dokumente/Lasa/Test/Shop/#"><button>Los'</button><a>
+    </div>
+    <a href="http://localhost:8000/Dokumente/Lasa/Test/Shop/#" class="main-btn">Los!</a>
 </section>
 
 <!-- Spiel ohne Style bisher -->
-<div class="game">
+<section class="game">
 
-<h2>Wähle eine Farbe:</h2>
+  <h1>Wähle eine Farbe</h1>
+  
+  <div class="farben-container" id="farbenContainer">
+    <!-- Buttons werden per JS eingefügt -->
+  </div>
 
-<div id="colors">
-  <button class="color-btn" style="background:red" onclick="showInfo('rot')"></button>
-  <button class="color-btn" style="background:blue" onclick="showInfo('blau')"></button>
-  <button class="color-btn" style="background:green" onclick="showInfo('grün')"></button>
-</div>
+  <div id="textfenster">
+    <h2 id="farbName"></h2>
+    <p><span class="label">Eigenschaften:</span> <span id="eigenschaften"></span></p>
+    <p><span class="label">Assoziationen:</span> <span id="assoziationen"></span></p>
+  </div>
 
-<div id="infoBox">
-  <select id="infoDropdown"></select>
-</div>
+  <script>
+    const farben = [
+      { 
+        name: "Rot", 
+        hex: "#e74c3c",
+        eigenschaften: "Warm, intensiv, signalstark. Wirkt aktivierend und erregend.",
+        assoziationen: "Liebe, Leidenschaft, Gefahr, Energie, Feuer, Stoppschilder"
+      },
+      { 
+        name: "Gelb", 
+        hex: "#f1c40f",
+        eigenschaften: "Hell, optimistisch, auffällig. Die hellste bunte Farbe.",
+        assoziationen: "Sonne, Sommer, Freude, Warnung, Neid, Kommunikation"
+      },
+      { 
+        name: "Grün", 
+        hex: "#2ecc71",
+        eigenschaften: "Ausgleichend, beruhigend, natürlich. Steht zwischen warm und kalt.",
+        assoziationen: "Natur, Wachstum, Hoffnung, Gesundheit, Geld, Erlaubnis"
+      },
+      { 
+        name: "Blau", 
+        hex: "#3498db",
+        eigenschaften: "Kühl, ruhig, tief. Wirkt konzentrationsfördernd und sachlich.",
+        assoziationen: "Himmel, Meer, Vertrauen, Kälte, Technik, Treue"
+      },
+      { 
+        name: "Lila", 
+        hex: "#9b59b6",
+        eigenschaften: "Mystisch, kreativ, außergewöhnlich. Mischung aus Rot + Blau.",
+        assoziationen: "Spiritualität, Luxus, Fantasie, Magie, Trauer, Kreativität"
+      },
+      { 
+        name: "Orange", 
+        hex: "#e67e22",
+        eigenschaften: "Warm, gesellig, energetisch. Aktiviert ohne aggressiv zu sein.",
+        assoziationen: "Herbst, Frucht, Lebensfreude, Aufbruch, Neugier, Veränderung"
+      },
+      { 
+        name: "Braun", 
+        hex: "#8b5a2b",
+        eigenschaften: "Erdig, stabil, unaufgeregt. Wirkt bodenständig und verlässlich.",
+        assoziationen: "Erde, Holz, Natur, Gemütlichkeit, Schokolade, Herbst"
+      }
+    ];
 
-</div>
+    const container = document.getElementById("farbenContainer");
+    const textfenster = document.getElementById("textfenster");
+    const farbName = document.getElementById("farbName");
+    const eigenschaften = document.getElementById("eigenschaften");
+    const assoziationen = document.getElementById("assoziationen");
+
+    let aktiverButton = null;
+
+    farben.forEach(farbe => {
+      const btn = document.createElement("button");
+      btn.className = "farb-btn";
+      btn.style.backgroundColor = farbe.hex;
+      btn.title = farbe.name;
+      btn.setAttribute("aria-label", farbe.name);
+
+btn.addEventListener("click", () => {
+        // Alten aktiven Button zurücksetzen
+        if (aktiverButton) aktiverButton.classList.remove("aktiv");
+        
+        // Neuen Button markieren
+        btn.classList.add("aktiv");
+        aktiverButton = btn;
+
+        // Text anzeigen
+        farbName.textContent = farbe.name;
+        farbName.style.color = farbe.hex;
+        eigenschaften.textContent = farbe.eigenschaften;
+        assoziationen.textContent = farbe.assoziationen;
+        textfenster.style.display = "block";
+      });
+
+      container.appendChild(btn);
+    });
+  </script>
+
+</section>
 
 <section id="services" class="section">
   <div class="container">
@@ -176,7 +296,7 @@ Lass uns gemeinsam Zaubern lernen!<br>
   </div>
 </section>
 
-<section class=galery>
+<section>
   <div class="gallery">
 
             <img class="four-grid-cells"

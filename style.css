@@ -72,21 +72,19 @@ section {
 /* Burger */
 .burger {
   position: fixed;
-  top: 20px;
+  top:  60px;
   right: 20px;
-  width: 40px;
-  margin: 5px; 
+  width: 40px; 
   cursor: pointer;
   z-index: 1001;
 }
 
 .burger::before {
   content: "";
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 40px;
   background: rgba(252, 241, 228, 0.2); 
   border-radius: 10px; 
   z-index: -1;
@@ -94,6 +92,7 @@ section {
 .burger:hover::before{
    box-shadow: 28px 22px 16px 1px rgba(0, 0, 0, 0.05);
    transform: translateY(-3px);
+   
 }
 
 .burger span {
@@ -226,6 +225,10 @@ nav a {
   align-items: center;
   justify-content: center;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+
 }
 
 .hero h2 {
@@ -270,18 +273,19 @@ nav a {
 
   filter: brightness(1.05) contrast(1.05);
 }
-}
+
 
 /* Overlay für Transparenz */
 .hero-overlay {
-  background: linear-gradient(
-    rgba(252, 241, 228, 0.25),
-    rgba(252, 241, 228, 0.45));
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(100, 98, 96, 0.7); 
   z-index: 1;
+
+  background: linear-gradient(
+    rgba(252, 241, 228, 0.25),
+    rgba(252, 241, 228, 0.45)
+  );
 }
 
 /* Inhalt darüber */
@@ -448,34 +452,7 @@ img.wide-image {
 }
 
 
-
-@media screen and (max-width: 430px) {
-#logo{
-    padding-top: 10px;
-    width: 75px;
-    margin:-30px;
-}
-
-
-/* changes the grid layout to a single column */
-    div.gallery {
-        grid-template-columns: 1fr;
-    }
-
-
-/* resets the grid placement properties for 
-the images spanning four grid cells */
-    img.four-grid-cells {
-        grid-row: auto;
-        grid-column: auto;
-    }
-
-/* resets the grid placement properties for 
-the images spanning two grid columns  */
-    img.wide-image {
-        grid-column: auto;
-    }
-
+   
 
 
 /* Quote */
@@ -560,7 +537,7 @@ button {
     filter: brightness(1.1) saturate(1.05);
   }
 }
-}
+
 
 /*Mobile Geräte allgemein */
 @media screen and (max-width: 768px) {
@@ -586,9 +563,11 @@ button {
  header {
     height: 80px; 
     position: sticky;
-    z-index: 1000;
 
   }
+.burger{
+   top: 30px; 
+}
   .social-header {
     justify-content: space-between;
     align-items: center;
@@ -608,18 +587,17 @@ button {
     margin: 0;
     padding: 0;
   }
+footer h4{
+font-size: 20px;
+}
+footer p{
+font-size: 15px;
+}
+
 
 }
 /* Hero Grundstruktur */
-.hero {
-  position: relative;
-  height: 90vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
+
 
 .section-p2{
 background-image: url('hintergrund.jpg');
@@ -653,7 +631,7 @@ font-size: 20px;
 padding-right: 4em; 
 }
 #account{
-    padding-right: 40px;
+  padding-right: 40px;
 }
     
 

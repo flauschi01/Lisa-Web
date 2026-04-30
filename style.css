@@ -586,6 +586,7 @@ button {
  header {
     height: 80px; 
     position: sticky;
+    z-index: 1000;
 
   }
   .social-header {

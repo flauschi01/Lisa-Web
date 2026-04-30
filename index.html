@@ -45,7 +45,7 @@ function toggleMenu() {
     </div>
 
     <div class ="title">
-        <a href="#about"><img src="Logo_Lasi.png"></a>
+        <a href="#about" id="logo"><img src="Logo_Lasi.png"></a>
         <!--<h1>LICHTBLICK</h1>
         <h3>Deine kreative Alltagsstütze</h3>-->
     </div>
@@ -57,64 +57,16 @@ function toggleMenu() {
         </nav>
         </div>
    
-    </div>
-
-    <nav id="menu">
-      <a href="#about">Über mich</a>
-      <a href="#services">Angebote</a>
-      <a href="#contact">Kontakt</a>
-    </nav>
-  </div>
+    
 </header>
 
-<!--Test Menu query -->
 
-
-<script>
-  window.addEventListener('scroll', function() {
-    const menub = document.getElementById('menub');
-    
-    // Prüfen, ob mehr als 200 Pixel gescrollt wurde
-    if (window.scrollY > 200) {
-      menub.classList.add('is-visible');
-    } else {
-      menub.classList.remove('is-visible');
-    }
-  });
-</script>
-
-<style>
-@media (max-width: 768px) {
-#menub{
-    position:fixed;
-    top: 0;
-    width: 100%;
-    opacity: 1;
-    visibility: visible;
-    transition: all 0.3s ease-in-out;
-    z-index: 1000;
-}
-#menub.is-visible {
-    opacity: 0;
-    visibility: hidden;
-}
-    #menub {
-        display: block; /* Sicherstellen, dass es auf Mobil da ist */
-    }
-}
-
-
-</style>
-
-
-
-<!--Test Menu query ende-->
 
 <section class="hero">
 
   <!-- Video Hintergrund -->
-  <video autoplay muted loop playsinline class="hero-video">
-    <source src="video.mp4" type="video/mp4">
+  <video autoplay muted loop playsinline webkit-playsinline class="hero-video">
+    <source src="lasi.mp4" type="video/mp4">
   </video>
 
   <!-- Overlay -->
@@ -122,15 +74,15 @@ function toggleMenu() {
 
   <!-- Inhalt -->
   <div class="hero-content">
-    <h2>ERFINDE DICH NEU</h2>
-    <p>Raum für Wachstum, Kreativität & Lebensfreude</p>
+   
+
         <a href="http://localhost:8000/Dokumente/Lasa/Test/Shop/#"><button>Deinen Kurs finden</button></a>
   </div>
 </section>
 
 <section id="about" class="section light">
-  
-    <h2>Über</h2>
+  <!-- <h2>Über</h2> -->
+    
 <div class="about-light">
     <p>
 <br>Na du?<br>
@@ -181,7 +133,10 @@ Lass uns gemeinsam Zaubern lernen!<br>
 <!-- Spiel ohne Style bisher -->
 <section class="game">
 
-  <h1>Wähle eine Farbe</h1>
+  <h1>Wähle eine Farbe du Schlunz</h1>
+    <p>Hier steht der super Text, der erklärt wie das mit dem Spiel.<br>
+    Noch ein toller Satz den Lasi noch schickt.<br>
+    </p>
   
   <div class="farben-container" id="farbenContainer">
     <!-- Buttons werden per JS eingefügt -->
@@ -281,16 +236,16 @@ btn.addEventListener("click", () => {
     <h2>Meine Angebote</h2>
     <div class="cards">
       <div class="card">
-        <h3>Einzelberatung</h3>
-        <p>Individuelle Begleitung für deine Themen.</p>
+        <h3>Einzelstündle</h3>
+        <a href="#"><p>Individuelle Begleitung für deine Themen.</p></a>
       </div>
       <div class="card">
-        <h3>Kreativ-Workshops</h3>
-        <p>Entfalte deinen Ausdruck durch Kunst.</p>
+        <h3>Schnupperangebot</h3>
+        <a href="#"><p>Entfalte deinen Ausdruck durch Kunst.</p></a>
       </div>
       <div class="card">
-        <h3>Online-Kurse</h3>
-        <p>Lerne flexibel und in deinem Tempo.</p>
+        <h3>Gruppenangebot</h3>
+        <a href="#"><p>Lerne flexibel und in deinem Tempo.</p></a>
       </div>
     </div>
   </div>
@@ -333,7 +288,7 @@ btn.addEventListener("click", () => {
 
 <section class="quote">
   <blockquote>
-    „Kunst wäscht den Staub des Alltags von der Seele. - Pablo Picasso“
+    „Kunst wäscht den Staub des Alltags von der Seele." <p>Pablo Picasso</p>
   </blockquote>
 </section>
 
@@ -367,7 +322,7 @@ btn.addEventListener("click", () => {
     <footer class="section-p2">
         <div class="col">
             <img src="logo" alt="">
-            <h1>Kontakt</h1>
+            <h4>Kontakt</h4>
             <p><strong>Adresse:</strong> Name der Geschäftsadresse</p>
             <p><strong>Telefon:</strong> Telefonnummer</p>
             <p><strong>Geschäftszeiten:</strong> Zeiten</p>
@@ -382,7 +337,7 @@ btn.addEventListener("click", () => {
         </div>
 
         <div class="col"id="uber">
-            <h4>Über</h4>
+            <h4>Information</h4>
                 <a href="#"><p>Über mich</p></a>
                 <a href="#"><p>Allgemeine Geschäftsbedingungen</p></a>
                 <a href="#"><p>Kontaktiere mich</p></a>

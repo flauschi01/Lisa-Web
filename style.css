@@ -1198,7 +1198,7 @@ button {
 
 
 /*Mobile Geräte allgemein */
-@media screen and (max-width: 768px) {
+@media  (max-width: 768px) {
    .gallery {
         grid-template-columns: 1fr 1fr;
     }

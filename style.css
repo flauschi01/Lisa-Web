@@ -671,6 +671,10 @@ button {
     height: 80px;
   }
 */
+ .about-content {
+    grid-template-columns: 1fr;
+  }
+    
  .about-dark,
  .about-light {
     padding: 20px;

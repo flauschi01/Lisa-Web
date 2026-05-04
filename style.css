@@ -3,13 +3,18 @@
     --sage: #a0bcae;
     --dark-sage: #6e8970;
     --yellow: #fab42d;
+    --yellow-light:#fdf6d8;
 }
 
-/* Fonts hinzufügen */
+/*Debug Linien
 
 * {
   outline: 1px solid red;
 }
+*/
+
+/* Fonts hinzufügen */
+
 
 @font-face {
   font-family: myfont; /* set name */
@@ -60,7 +65,7 @@ h1{
     font-size: 60px;
 }
 p{
-    font-size: 30px;
+    font-size: 25px;
 }
 a{
     text-decoration: none;
@@ -324,53 +329,112 @@ nav a {
 
 /* Über mich */
 .main-btn {
-  display: inline-block;
-  margin: 20px auto;
-  padding: 20px 30px;
-  border: 2px solid var(--yellow);
-  background: none;
-  font-size: 2rem;
-  color: var(--yellow);
-  text-decoration: none;
-  border-radius: 30px;
-  cursor: pointer;
+    margin: 20px auto;
+    padding: 20px 30px;
+    border: 2px solid var(--yellow);
+    background: none;
+    font-size: 2rem;
+    color: var(--yellow);
+    text-decoration: none;
+    border-radius: 30px;
+    cursor: pointer;
 }
 .main-btn:hover {
-  background: var(--yellow);
-  color: var(--eggshell);
-  transform: translateY(-3px);
-  transition: 0.3s;
+    background: var(--yellow);
+    color: var(--eggshell);
+    transform: translateY(-3px);
+    transition: 0.3s;
+}
+
+.button-wrapper {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
 }
 
 #about {
   text-align: center;
-}
+  }
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    text-align: center;
+    background: var(--yellow-light)
+    }
+/*
 #about p{
-    text-align: left;
-}
+    
+    }
+
+
+.about-image img {
+    max-width: 300px;
+    width: 100%;
+    border-radius: 12px;
+    }
+
 .about-light{
-    background: #f9f6f2;
-    padding: 60px 40px;
+    flex: 1;
+    padding: 20px;
+    background: var(--eggshell)
 }
 
-.about-dark {
-  text-align: center;
-  background: #efe7df;
-  position:relative;
-  font-size: 30px;
-  width: 100%;
-  padding: 0 40px;
+.about-dark{
+    flex: 1;
+    padding: 20px;
+    background: var(--eggshell)
+}
+*/
+
+#about .main-btn{
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background: var(--yellow);
+    color: white;
+}
+.about-light p {
+    background: var(--eggshell);
+    color: var(--dark-sage);
+    padding: 10px 40px;
+    text-align: left;
+    max-width: 1600px;
+    margin: auto;
+    border-radius: 5%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+.about-dark p{
+    text-align: left;
+    color: var(--dark-sage);
+    background: var(--eggshell);
+    position:relative;
+    font-size: 25px;
+    width: 100%;
+    padding: 10px 40px;
+    max-width: 1600px;
+    margin: auto;  
+    border-radius: 5%; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+.text-icon{
+    max-width: 30px;
 }
 
 /*Spiel*/
-
+    .game {
+    width: 100%;
+    text-align: center;
+    }
 
     .farben-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
-      margin-bottom: 24px;
+     display: flex;
+     flex-wrap: wrap;
+     gap: 12px;
+     max-width: 100%;
+     justify-content: center;
+     margin-bottom: 24px;
+     text-align: center;
     }
 
     .farb-btn {
@@ -617,10 +681,10 @@ h3, h4{
 font-size: 20px;
 }
 footer p{
-font-size: 15px;
+font-size: 12px;
 }
 .copyright{
-font-size: 20px;
+font-size: 18px;
 }
 
 }

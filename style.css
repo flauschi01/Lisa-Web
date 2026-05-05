@@ -417,8 +417,22 @@ nav a {
     border-radius: 5%; 
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
+
+
 .text-icon{
-    max-width: 30px;
+    float: right;
+    width: 250px;
+     margin: 10px 0 10px 20px;
+    border-radius: 10px;
+}
+
+.text-icon-alt{
+    float: left;
+    margin-right: 30px;
+    border: 30px;
+    width: 250px;
+     margin: 10px 20px 10px 20px;
+    border-radius: 10px;
 }
 
 /*Spiel*/
@@ -499,35 +513,57 @@ nav a {
     color: var(--dark-sage);
 }
 
+.cards img{
+    padding: 10px;
+    max-height: 515px;
+    border-radius: 10%;
+    width: 367px;
+}
+
 .card:hover {
   transform: translateY(-5px);
+}
+
+/*Banner*/
+
+.banner{
+    text-align: center;
+    background: var(--dark-sage);
+    color: var(--eggshell);
+    
+    
 }
 
 /*Galery*/
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-auto-rows: auto;
-    grid-auto-flow: dense;
-    gap: 6px;
-    overflow: hidden;
+     column-count: 4;        /* Anzahl Spalten */
+     column-gap: 12px;
 }
+.gallery img{
+
+    width: 100%;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+/*
 
 img, video {
     max-width: 100%;
-  height: auto;
-  display: block;
+    height: auto;
+    object-fit: cover;
+    display: block;
 }
 
-img.four-grid-cells gallery{
-    grid-row: span 2 / auto;
-    grid-column: span 2 / auto;
 }
-
-img.wide-image {
-    grid-column: span 2 / auto;
-}
+*/
 
 
    
@@ -652,7 +688,23 @@ button {
     
 }
 
+@media (max-width: 1024px) {
+  .gallery {
+    column-count: 3;
+  }
+}
 
+@media (max-width: 768px) {
+  .gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    column-count: 1;
+  }
+}
 
 /*
 
@@ -671,13 +723,13 @@ button {
     height: 80px;
   }
 */
- .about-content {
-    grid-template-columns: 1fr;
-  }
-    
  .about-dark,
  .about-light {
-    padding: 20px;
+    padding: 10px;
+    font-size: 15px;
+  }
+ .about-content {
+    grid-template-columns: 1fr;
   }
 
 
@@ -715,7 +767,8 @@ footer .col{
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-margin-bottom: 20px;
+margin-bottom: 30px;
+margin: auto;
 }
 
 footer .col p{
@@ -738,7 +791,7 @@ padding-right: 4em;
 .copyright{
 text-align: center;
 padding-bottom: 20px;
-margin-top: -20px;
+margin-top: 40px;
 color: var(--dark-sage)
 }
 

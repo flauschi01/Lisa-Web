@@ -663,6 +663,7 @@ button {
   }
     h1{
     font-size: 40px;
+    padding-right: 10px;
     }
 
   .header-bar {
@@ -684,6 +685,7 @@ button {
   .cards {
     flex-direction: column;
     column-count: 1;
+    padding: 20px;
   }
 .burger{
    position: fixed;
@@ -693,9 +695,12 @@ button {
 .about-dark, .about-light{
     max-width: 440px;
     column-count: 1;
+    
 }
 .about-dark, .about-light img{
-    max-width: 50px;
+    max-width: 150px;
+    position: auto;
+    
 }
 
 @media (max-width: 1024px) {

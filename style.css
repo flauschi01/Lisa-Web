@@ -661,6 +661,9 @@ button {
   header {
     height: 80px;
   }
+    h1{
+    font-size: 40px;
+    }
 
   .header-bar {
     display: none;
@@ -680,12 +683,19 @@ button {
 
   .cards {
     flex-direction: column;
+    column-count: 1;
   }
 .burger{
    position: fixed;
    top: 25px;
    right: 20px;
-    
+}
+.about-dark, .about-light{
+    max-width: 440px;
+    column-count: 1;
+}
+.about-dark, .about-light img{
+    max-width: 50px;
 }
 
 @media (max-width: 1024px) {

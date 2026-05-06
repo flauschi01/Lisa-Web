@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Kreative Lebensberatung</title>
   <link rel="stylesheet" href="style.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -45,7 +45,7 @@ function toggleMenu() {
     </div>
 
     <div class ="title">
-        <a href="#about" id="logo"><img src="pictures/Logo_Lasi.png"></a>
+        <a href="#about" id="logo"><img src="pictures/Logo_Lasi.png" loading="lazy"></a>
         <!--<h1>LICHTBLICK</h1>
         <h3>Deine kreative Alltagsstütze</h3>-->
     </div>
@@ -65,7 +65,7 @@ function toggleMenu() {
 <section class="hero">
 
   <!-- Video Hintergrund -->
-  <video autoplay muted loop playsinline webkit-playsinline  preload="auto" poster="/pictures/avifallback.jpg" class="hero-video">
+  <video autoplay muted loop playsinline webkit-playsinline preload="auto" poster="/pictures/avifallback.jpg" class="hero-video" >
     <source src="lasi2.mp4" type="video/mp4">
   </video>
 
@@ -76,7 +76,7 @@ function toggleMenu() {
   <div class="hero-content">
    
 
-        <a href="http://localhost:8000/Dokumente/Lasa/Test/Shop/#"><button>Deinen Kurs finden</button></a>
+        <a href="http://localhost:8000/Dokumente/Lasa/Test/Shop/#" class="main-btn">Deinen Kurs finden</a>
   </div>
 </section>
 
@@ -90,7 +90,7 @@ function toggleMenu() {
               
 
     <p><br>
-        <img class="text-icon-alt" src="pictures/t-jesus.jpg" alt="Beschreibung">
+        <img class="text-icon-alt" src="pictures/t-jesus.jpg" alt="Beschreibung" loading="lazy">
         Wir alle leiden mehr oder weniger, lauter oder leiser an den Symptomen unserer Zeit.
         Jede:r auf seine ganz eigene Weise.<br>    
         Und manchmal bieten genau diese unangenehmen Zustände eine große Chance, die man in dem
@@ -104,7 +104,7 @@ function toggleMenu() {
 
         Denn die meisten unserer “Probleme” sind nämlich lösbar, indem du erstmal wieder richtig zu
         dir findest und dabei etwas schaffst, was einfach nur dir gehört und auch nur du verstehst.<br>
-<img class="text-icon" src="pictures/t-spark.jpg" alt="Beschreibung">
+<img class="text-icon" src="pictures/t-spark.jpg" alt="Beschreibung" loading="lazy">
         Und mit ein bisschen Unterstützung, bekommst du dann genau an diesem Ort zusätzlich noch
         ein paar ganz neue und andere Blickwinkel auf deine Welt.<br>
           <br>
@@ -121,14 +121,14 @@ function toggleMenu() {
 
         <div class="about-dark"><p>
             
-        <br>     <br>Na du?<img class="text-icon" src="pictures/t-tree.jpg" alt="Beschreibung"><br>
+        <br>     <br>Na du?<img class="text-icon" src="pictures/t-tree.jpg" alt="Beschreibung" loading="lazy"><br>
         Geht's dir grade auch so bescheiden?<br>
 
         Bist du auch so ausgelaugt und erschöpft?<br>
 
         Fühlst du dich manchmal ungesehen und/oder übergangen?<br>
         Vielleicht sogar ausgeschlossen oder angegriffen?<br><br><br> <br> <br>
-<img class="text-icon-alt" src="pictures/t-orange.jpg" alt="Beschreibung">
+<img class="text-icon-alt" src="pictures/t-orange.jpg" alt="Beschreibung" loading="lazy">
 
         Bist du irgendwie so taub oder einfach nur noch richtig    sauer und genervt?<br>
         Probierst du vielleicht sogar, das vor Freunden, Kollegen oder der Familie zu verstecken?<br>
@@ -257,37 +257,6 @@ btn.addEventListener("click", () => {
     });
   </script>
 
-<style>
-
-    .farb-btn {
-      width: 100px;
-      height: 100px;
-      border: none;
-      padding: 0;
-      border-radius: 12px;
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.15s, box-shadow 0.15s;
-    }
-
-    .farb-btn img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .farb-btn:hover {
-      transform: scale(1.08);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-    }
-/*
-    .farb-btn.aktiv {
-      outline: 4px solid farbe.name;
-      outline-offset: 2px;
-    }
-*/
-</style>
 
 </section>
 
@@ -298,19 +267,19 @@ btn.addEventListener("click", () => {
       <div class="card">
         <h3>Einzelstündle</h3>
         <a href="#"><p>Individuelle Begleitung <br> für deine Themen.</p>
-        <img src="pictures/k-art-supply.jpg">
+        <img src="pictures/k-art-supply.jpg" loading="lazy">
         </a>
       </div>
       <div class="card">
         <h3>Schnupperkurs</h3>
         <a href="#"><p>Entfalte deinen Ausdruck durch Kunst.</p>
-        <img src="pictures/ss-chandelier.jpg">
+        <img src="pictures/ss-chandelier.jpg" loading="lazy">
         </a>
       </div>
       <div class="card">
         <h3>Gruppenangebot</h3>
         <a href="#"><p>Lerne flexibel und <br> in deinem Tempo.</p>
-        <img src="pictures/gr-hug.jpg">
+        <img src="pictures/gr-hug.jpg" loading="lazy">
         </a>
       </div>
     </div>
@@ -318,7 +287,7 @@ btn.addEventListener("click", () => {
 </section >
 
 <section class="banner">
-    <h1>Bald auch neue Kunstprodukte im Shop erhältlich!<h1>
+    <h1>Bald auch neue Kunstprodukte im Shop erhältlich!</h1>
 </section>
 
 <section>
@@ -326,65 +295,84 @@ btn.addEventListener("click", () => {
 
             <img class="four-grid-cells"
                 src="pictures/g-lasi-sre.jpg"
-                alt="Lisa am Basteln auf einer Wiese" />
+                alt="Lisa am Basteln auf einer Wiese"
+                loading="lazy"
+             />
 
             <img
                 src="pictures/g-iuliana.jpg"
-                alt="Ein Bildausschnitts der Iuliana von Lisa man sieht bunte Flächen" />
+                loading="lazy"
+                alt="Ein Bildausschnitts der Iuliana von Lisa man sieht bunte Flächen"
+
+              />
 
             <img class="wide-image"
                 src="pictures/g-donkey.jpg"
+                loading="lazy"
                 alt="Ein Bild eines blauen Esels auf Aquarell" />
 
             <img
                 src="pictures/g-material.jpg"
+                loading="lazy"
                 alt="Wolle in verschiedenen Farben und Holz in einer Kiste" />
 
             <img
                 src="pictures/g-colors.jpg"
+                loading="lazy"
                 alt="Gemalte Farben auf einem Blatt Papier zum Kontraste erproben und vergleichen" />
 
             <img class="wide-image"
                 src="pictures/g-soap.jpg"
+                loading="lazy"
                 alt="Ein Seifenschälchen mit bunten Blumen darauf" />
 
             <img
                 src="pictures/g-splatter.jpg"
+                loading="lazy"
                 alt="Spritzer beim Aktionpainting auf einem Blatt Papier" />
             <img
                 src="pictures/g-coffee.jpg"
+                loading="lazy"
                 alt="Muster auf der Oberfläche eines Espressokaffeetäschens" />
 
             <img
                 src="pictures/g-water-greenhouse.jpg"
+                loading="lazy"
                 alt="Ein Gewächshausbild in Aquarell" />
 
             <img
                 src="pictures/g-landart.jpg"
+                loading="lazy"
                 alt="Blätter im Wald auf dem Boden zu einem Herz geformt" />
             <img
                 src="pictures/g-dreamcatcher.jpg"
+                loading="lazy"
                 alt="Ein Ausschnitt eines Traumfängers" />
 
             <img
                 src="pictures/g-tree.jpg"
+                loading="lazy"
                 alt="Lichtblicke durch die Krone eines Baumes" />
 
 
             <img
                 src="pictures/g-spooky-man.jpg"
+                loading="lazy"
                 alt="Blätter im Wald auf dem Boden zu einem Herz geformt" />
 
             <img
                 src="pictures/g-doodle-face.jpg"
+                loading="lazy"
                 alt="Blätter im Wald auf dem Boden zu einem Herz geformt" />
 
             <img
                 src="pictures/g-langenhard.jpg"
+                loading="lazy"
                 alt="Blätter im Wald auf dem Boden zu einem Herz geformt" />
 
              <img
                 src="pictures/g-face-brown.jpg"
+                loading="lazy"
                 alt="Blätter im Wald auf dem Boden zu einem Herz geformt" />
 
         </div>

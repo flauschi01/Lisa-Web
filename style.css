@@ -235,7 +235,8 @@ nav a {
 
 .hero {
   display: flex;
-  min-height: 90svh;
+  min-height: 100vh;
+  min-height: 100svh;
   isolation: isolate;
   background: linear-gradient(to bottom, #f5f0eb, #ffffff);
   align-items: center;
@@ -629,6 +630,9 @@ button {
   .hero-video {
     filter: brightness(1.1) saturate(1.05);
   }
+html {
+    scroll-behavior: auto;
+  }
 }
 
 
@@ -648,6 +652,17 @@ button {
     font-size: 40px;
     padding-right: 10px;
     }
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+    .hero-video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 .gallery img{
     max-width: 200px;
 }
@@ -691,9 +706,7 @@ button {
     max-width: 300px;
   }
  .about-content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    grid-template-columns: 1fr;
   }
   .about-light p,
   .about-dark p {
@@ -706,6 +719,21 @@ button {
     margin-top: 20px;
   }
 
+.section_light{
+    padding: 10px;
+    background: var(--yellow-light);
+}
+footer{
+    padding-top: 20px;
+    flex-direction: column;
+    column-count: 1;
+}
+img{
+ max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 }
 
 @media (max-width: 480px) {
@@ -714,23 +742,8 @@ button {
   }
 }
 
-/*
+/*Ende Media*/
 
-#logo{
-    padding-top: 10px;
-    max-width: 75px;
-    margin:-30px;
-}
-
-.container a{
-    overflow-wrap: break-word;
-}
-  .social-header {
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
-  }
-*/
  .about-dark,
  .about-light {
     padding: 10px;
@@ -748,7 +761,7 @@ font-size: 12px;
 font-size: 18px;
 }
 
-}
+
 /* Hero Grundstruktur */
 
 
@@ -800,13 +813,3 @@ margin-top: 40px;
 color: var(--dark-sage)
 }
 
-
-
-/*Notizen
-Über 
-(viel Text stylen Mehrere hero sections)--> BUTTON ZUM KURS [Lass uns gemeinsam zaubern lernen]"Los!"(auf button)
-Spiel
-Mein Weg/Krampf
-Meine Angebote
-
-*/

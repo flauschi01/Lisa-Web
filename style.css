@@ -361,7 +361,7 @@ nav a {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     text-align: center;
-    background: var(--yellow-light)
+    background: var(--yellow-light);    
     }
 
 #about .main-btn{
@@ -648,6 +648,9 @@ button {
     font-size: 40px;
     padding-right: 10px;
     }
+.gallery img{
+    max-width: 200px;
+}
 
   .header-bar {
     display: none;

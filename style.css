@@ -363,30 +363,6 @@ nav a {
     text-align: center;
     background: var(--yellow-light)
     }
-/*
-#about p{
-    
-    }
-
-
-.about-image img {
-    max-width: 300px;
-    width: 100%;
-    border-radius: 12px;
-    }
-
-.about-light{
-    flex: 1;
-    padding: 20px;
-    background: var(--eggshell)
-}
-
-.about-dark{
-    flex: 1;
-    padding: 20px;
-    background: var(--eggshell)
-}
-*/
 
 #about .main-btn{
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -530,10 +506,13 @@ nav a {
     text-align: center;
     background: var(--dark-sage);
     color: var(--eggshell);
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
     
     
 }
-
 /*Galery*/
 
 .gallery {
@@ -654,9 +633,13 @@ button {
 
 
 /*Mobile Geräte allgemein */
+@media (max-width: 1024px) {
+  .gallery {
+    column-count: 3;
+  }
+}
+
 @media (max-width: 768px) {
-
-
 
   header {
     height: 80px;
@@ -679,6 +662,7 @@ button {
   }
 
   .gallery {
+    column-count: 2;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -687,32 +671,38 @@ button {
     column-count: 1;
     padding: 20px;
   }
+    .banner h1{
+    font-size: 25px;
+}
 .burger{
    position: fixed;
    top: 25px;
    right: 20px;
 }
-.about-dark, .about-light{
-    max-width: 440px;
-    column-count: 1;
-    
-}
-.about-dark, .about-light img{
-    max-width: 150px;
-    position: auto;
-    
-}
-
-@media (max-width: 1024px) {
-  .gallery {
-    column-count: 3;
+  .text-icon,
+  .text-icon-alt {
+    float: none;
+    display: block;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 300px;
   }
-}
-
-@media (max-width: 768px) {
-  .gallery {
-    column-count: 2;
+ .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
+  .about-light p,
+  .about-dark p {
+    padding: 20px;
+    font-size: 20px;
+  }
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
 }
 
 @media (max-width: 480px) {
@@ -742,9 +732,6 @@ button {
  .about-light {
     padding: 10px;
     font-size: 15px;
-  }
- .about-content {
-    grid-template-columns: 1fr;
   }
 
 

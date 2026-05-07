@@ -66,14 +66,15 @@ h2, h3 {
 h1{
     font-family: 'myfont', serif;   
     color: var(--yellow);
-    font-size: 60px;
+  font-size: clamp(1.5rem, 4vw, 60px);
 }
-p{
+
+
     p {
-  font-size: clamp(16px, 2vw, 25px);
+    font-size: clamp(16px, 2vw, 25px);
 }
-}
-a{
+
+    a{
     text-decoration: none;
 }
 body {
@@ -98,7 +99,7 @@ section {
   right: 20px;
   width: 40px; 
   cursor: pointer;
-  z-index: 1001;
+  z-index: 1003;
 }
 
 .burger::before {
@@ -134,7 +135,7 @@ section {
   background: var(--eggshell);
   padding-top: 80px;
   transition: 0.4s;
-  z-index: 1000;
+  z-index: 1002;
 }
 
 #menu a {
@@ -171,11 +172,11 @@ section {
 
 /* Header */
 header {
-    background: var(--eggshell);
     position: sticky;
     top: 0;
-    height: 180px;
     z-index: 1000;
+    background: var(--eggshell);
+    padding: 10px 15px;
     will-change: transform;
 }
 
@@ -680,6 +681,10 @@ html {
   .gallery {
     column-count: 3;
   }
+
+  .header-bar {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -693,12 +698,33 @@ p {
 .container {
   min-width: 0;
 }
+
   header {
-    min-height: 120px;
+    padding: 4px 10px;
+    min-height: unset;
   }
-   h1 {
-  font-size: clamp(2rem, 5vw, 60px);
-}
+
+  .social-header {
+    align-items: center;
+    min-height: 60px;
+  }
+
+  .title {
+    padding-left: 0;
+  }
+
+  .title img {
+    max-width: 85px;
+    padding: 0;
+    margin: 0;
+    display: block;
+  }
+
+  .burger {
+    top: 30px;
+    transform: translateY(-50%);
+    right: 15px;
+  }
 
 button, a {
   -webkit-tap-highlight-color: transparent;
@@ -724,15 +750,25 @@ button, .farb-btn {
   .social {
     display: none;
   }
+    .social-header {
+    align-items: center;
+    min-height: 60px;
+  }
+    .title{
+    padding-left: 0;    
+}
 
   .title img {
     max-width: 140px;
+    padding: 0;
+    margin: 0;
+    display: block;
   }
 
   .gallery {
 
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  
   }
 
   .cards {
@@ -743,11 +779,7 @@ button, .farb-btn {
     .banner h1{
     font-size: 25px;
 }
-.burger{
-   position: fixed;
-   top: 25px;
-   right: 20px;
-}
+
   .text-icon,
   .text-icon-alt {
     float: none;
@@ -789,8 +821,29 @@ img{
 }
 
 @media (max-width: 480px) {
-  .gallery {
-    column-count: 1;
+    button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+    button, .farb-btn {
+  min-height: 44px;
+  min-width: 44px;
+    
+}
+.main-btn {
+  min-height: 44px;
+  min-width: 44px;
+ font-size: 1.5rem;
+    top: 30px;
+}
+
+    .gallery {
+    column-count: 2;
+  }
+    .gallery img{
+    max-width: 200px;
+    max-height: 300px;
+    display: block;
+    break-inside: avoid;
   }
 }
 

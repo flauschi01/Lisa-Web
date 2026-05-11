@@ -850,11 +850,21 @@ button, .farb-btn {
   }
  .about-content {
     grid-template-columns: 1fr;
+
   }
+.about-dark p{
+ border-radius: 0;
+}
+.about-light p{
+ border-radius: 0;
+}
+
+
   .about-light p,
   .about-dark p {
     padding: 20px;
     font-size: 20px;
+    
   }
 .button-wrapper {
     display: flex;
@@ -890,6 +900,7 @@ img{
   min-width: 44px;
     
 }
+
 .main-btn {
   min-height: 44px;
   min-width: 44px;
@@ -902,7 +913,7 @@ img{
 
   .gallery {
     column-count: 2;
-    column-gap: 10px;
+    column-gap: 5px;
   }
 
   .gallery img {
@@ -972,6 +983,9 @@ font-size: 20px;
   display: flex;
   align-items: center;
   gap: 10px;
+}
+#contact{
+
 }
 #uber{
 padding-right: 4em; 

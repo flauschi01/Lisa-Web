@@ -2,10 +2,10 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Kreative Lebensberatung</title>
   <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  
 </head>
 
@@ -25,15 +25,9 @@
   <a href="#services">Angebote</a>
   <a href="#contact">Kontakt</a>
   <a href="#">Infos</a>
+  <a id="phone" href="#" id="phone-link" data-number="+4915567404579" class="fa fa-phone"><p>Ruf einfach an!</p></a>
 
 </nav>
-
-<script>
-function toggleMenu() {
-  document.getElementById("menu").classList.toggle("active");
-  document.querySelector(".burger").classList.toggle("active");
-}
-</script>
 
 
 <header>   
@@ -42,6 +36,7 @@ function toggleMenu() {
     <div class="social">
         <a href="#" class="fa fa-instagram"></a>
         <a href="#" class="fa fa-twitter"></a>
+        <a href="#" href="#" id="phone-link" data-number="+4915567404579" class="fa fa-phone"></a>
     </div>
 
     <div class ="title">
@@ -83,14 +78,12 @@ function toggleMenu() {
 <section id="about" class="about-content">
         <div class="button-wrapper">
         <h1>Schön, dass du da bist!</h1>
-            </div>
+        </div>
     
         <div class="about-light">
-             
-              
-
+        
     <p><br>
-        <img class="text-icon-alt" src="pictures/t-jesus.jpg" alt="Beschreibung" loading="lazy">
+<img class="text-icon-alt" src="pictures/t-orange.jpg" alt="Beschreibung" loading="lazy">
         Wir alle leiden mehr oder weniger, lauter oder leiser an den Symptomen unserer Zeit.
         Jede:r auf seine ganz eigene Weise.<br>    
         Und manchmal bieten genau diese unangenehmen Zustände eine große Chance, die man in dem
@@ -104,13 +97,13 @@ function toggleMenu() {
 
         Denn die meisten unserer “Probleme” sind nämlich lösbar, indem du erstmal wieder richtig zu
         dir findest und dabei etwas schaffst, was einfach nur dir gehört und auch nur du verstehst.<br>
-<img class="text-icon" src="pictures/t-spark.jpg" alt="Beschreibung" loading="lazy">
+<img class="text-icon" id="langenhard" src="pictures/g-langenhard.jpg" alt="Beschreibung" loading="lazy">
         Und mit ein bisschen Unterstützung, bekommst du dann genau an diesem Ort zusätzlich noch
         ein paar ganz neue und andere Blickwinkel auf deine Welt.<br>
           <br>
 
         Lass uns gemeinsam Zaubern lernen!
-  <br><br>
+  <br><br><br>
         
         
                 
@@ -121,14 +114,14 @@ function toggleMenu() {
 
         <div class="about-dark"><p>
             
-        <br>     <br>Na du?<img class="text-icon" src="pictures/t-tree.jpg" alt="Beschreibung" loading="lazy"><br>
+        <br>     <br>Na du?<img class="text-icon" src="pictures/sp-avi.jpg" alt="Kind das mit Farben auf Leinwand malt" loading="lazy"><br>
         Geht's dir grade auch so bescheiden?<br>
 
         Bist du auch so ausgelaugt und erschöpft?<br>
 
         Fühlst du dich manchmal ungesehen und/oder übergangen?<br>
         Vielleicht sogar ausgeschlossen oder angegriffen?<br><br><br> <br> <br>
-<img class="text-icon-alt" src="pictures/t-orange.jpg" alt="Beschreibung" loading="lazy">
+<img class="text-icon-alt" src="pictures/g-tree.jpg" alt="Beschreibung" loading="lazy">
 
         Bist du irgendwie so taub oder einfach nur noch richtig    sauer und genervt?<br>
         Probierst du vielleicht sogar, das vor Freunden, Kollegen oder der Familie zu verstecken?<br>
@@ -149,9 +142,11 @@ function toggleMenu() {
 <!-- Spiel -->
 <section class="game">
 
-  <h1>Wähle eine Farbe du Schlunz</h1>
-    <p>Hier steht der super Text, der erklärt wie das mit dem Spiel.<br>
-    Noch ein toller Satz den Lasi noch schickt.<br>
+  <h1>Testspiel</h1>
+    <p>Hallo, du<br>
+    Lust auf ein kleines Kennenlernspiel?<br>
+    Magst du mir deine <b>Lieblingsfarbe</b> verraten? <br>
+    Ich verspreche dir, anhand dieser etwas über dich herausfinden und erzählen zu können!<br><br><br>
     </p>
   
   <div class="farben-container" id="farbenContainer">
@@ -163,99 +158,6 @@ function toggleMenu() {
     <p><span class="label"><b>Eigenschaften:</b></span> <span id="eigenschaften"></span></p>
     <p><span class="label"><b>Assoziationen:</b></span> <span id="assoziationen"></span></p>
   </div>
-
-  <script>
-    const farben = [
-      { 
-        name: "Rot", 
-        img: "pictures/btn-rot.png",
-        eigenschaften: `Ich würde sagen, man könnte deine Lebensart generell als aktiv und energiegeladen bezeichnen. Du bist ausdrucksstark, charismatisch und leidenschaftlich und brennst für das Abenteuer, für welches du mitunter auch andere einfach  begeistern und motivieren kannst. :)`,
-        assoziationen: "Feuer, Liebe, Leidenschaft, Gefahr, Aufbruch"
-      },
-      { 
-        name: "Gelb", 
-        img: "pictures/btn-gelp.png",
-        eigenschaften: `Ähnlich wie die Sonne wirkst du auf mich optimistisch am Strahlen und steckst damit auch dein Umfeld an. Dein helles Gemüt ist gerne unbeschwert und frei, du liebst den Sommer und die Wärme und versuchst diese auch zu verbreiten. Du magst das freudige Durcheinander und bist am liebsten unter Menschen.`,
-        assoziationen: "Freude, Sommer, Sonne, Wärme, Kommunikation, Warnung"
-      },
-      { 
-        name: "Grün", 
-        img: "pictures/btn-gruen.png",
-        eigenschaften: `Ich denke du bist eine ruhige Seele, die stetig versucht Harmonie und Ausgleich in ihrem und dem Leben ihrer Liebsten herzustellen. 
-Du hast eine genaue Vorstellung von bestimmten Abläufen und kannst auch mit Finanzen gut umgehen. 
-Dein Umfeld schätzt deine beruhigende Lebendigkeit. ;)`,
-        assoziationen: "Natur, Wachstum, Hoffnung, Gesundheit, Erlaubnis"
-      },
-      { 
-        name: "Blau", 
-        img: "pictures/btn-blau.png",
-        eigenschaften: `Ich denke deine analytische und sachliche Art wirkt beruhigend und konzentrationsfördernd auf dein Umfeld. Deinem tiefgründigen Blick bleibt nicht viel verborgen, was dich zu einer vertrauensvollen und eloquenten Ansprechpartner:in macht. Sowohl deine Hobbies als auch dein Zuhause zeugen von einer kühlen Verlässlichkeit.`,
-        assoziationen: "Kühl, Tiefe, Himmel, Meer, Vertrauen, Technik, Treue"
-      },
-      { 
-        name: "Lila", 
-        img: "pictures/btn-lila.png",
-        eigenschaften: `Ich nehme dich als eine mystische Verbindung aus kühlem Edelmut und warmer Kreativität wahr.
-Du füllst dein Leben mit Spiritualität und fantasievollem  Luxus und wirkst magisch auf dein Umfeld. `,
-        assoziationen: "Magie, Spiritualität, Luxus, Andenken"
-      },
-      { 
-        name: "Orange", 
-        img: "pictures/btn-orange.png",
-        eigenschaften: `Ich glaube deine vitalisierende und warme Ausstrahlung macht dich zu einer geselligen Persönlichkeit, die andere einfach begeistern kann.
-Auch dein großes Mitgefühl spielt hierbei eine entscheidende Rolle.
-Du liebst den Herbst und bist meist neugierig und energiegeladen.
-Bücher und Natur könnten ebenso wie das Kochen oder Backen zu deinen Hobbies zählen. `,
-        assoziationen: "Herbst, Süden, Früchte, Wärme, Veränderung"
-      },
-      { 
-        name: "Braun", 
-        img: "pictures/btn-braun.png",
-        eigenschaften: `Ich empfinde dich als einen bodenständigen und verlässlichen Charakter, der ohne Hast durchs Leben geht.
-Deine Stabilität wirkt beruhigend auf dein Umfeld und dein Zuhause lädt jederzeit zum gemütlichen Verweilen ein.`,
-        assoziationen: "Erde, Holz, Schokolade, Herbst, Komfort"
-      }
-    ];
-
-    const container = document.getElementById("farbenContainer");
-    const textfenster = document.getElementById("textfenster");
-    const farbName = document.getElementById("farbName");
-    const eigenschaften = document.getElementById("eigenschaften");
-    const assoziationen = document.getElementById("assoziationen");
-
-    let aktiverButton = null;
-
-    farben.forEach(farbe => {
-      const btn = document.createElement("button");
-      btn.className = "farb-btn";
-        const img = document.createElement("img");
-  img.src = farbe.img;
-  img.alt = farbe.name;
-
-  btn.appendChild(img);
-      btn.setAttribute("aria-label", farbe.name);
-
-btn.addEventListener("click", () => {
-        // Alten aktiven Button zurücksetzen
-        if (aktiverButton) aktiverButton.classList.remove("aktiv");
-        
-        // Neuen Button markieren
-        btn.classList.add("aktiv");
-        aktiverButton = btn;
-
-        // Text anzeigen
-        farbName.textContent = farbe.name;
-
-        farbName.style.color = "blau" // Farbe des Buttons eintragen !!
-
-        eigenschaften.textContent = farbe.eigenschaften;
-        assoziationen.textContent = farbe.assoziationen;
-        textfenster.style.display = "block";
-      });
-
-      container.appendChild(btn);
-    });
-  </script>
 
 
 </section>
@@ -271,15 +173,15 @@ btn.addEventListener("click", () => {
         </a>
       </div>
       <div class="card">
-        <h3>Schnupperkurs</h3>
-        <a href="#"><p>Entfalte deinen Ausdruck durch Kunst.</p>
-        <img src="pictures/ss-chandelier.jpg" loading="lazy">
-        </a>
-      </div>
-      <div class="card">
         <h3>Gruppenangebot</h3>
         <a href="#"><p>Lerne flexibel und <br> in deinem Tempo.</p>
         <img src="pictures/gr-hug.jpg" loading="lazy">
+        </a>
+      </div>
+      <div class="card">
+        <h3>Schnupperkurs</h3>
+        <a href="#"><p>Entfalte deinen Ausdruck durch Kunst.</p>
+        <img src="pictures/ss-chandelier.jpg" loading="lazy">
         </a>
       </div>
     </div>
@@ -287,17 +189,12 @@ btn.addEventListener("click", () => {
 </section >
 
 <section class="banner">
+
     <h1>Bald auch neue Kunstprodukte im Shop erhältlich!</h1>
 </section>
 
 <section>
   <div class="gallery">
-
-            <img class="four-grid-cells"
-                src="pictures/g-lasi-sre.jpg"
-                alt="Lisa am Basteln auf einer Wiese"
-                loading="lazy"
-             />
 
             <img
                 src="pictures/g-iuliana.jpg"
@@ -305,11 +202,18 @@ btn.addEventListener("click", () => {
                 alt="Ein Bildausschnitts der Iuliana von Lisa man sieht bunte Flächen"
 
               />
-
-            <img class="wide-image"
+              <img class="wide-image"
                 src="pictures/g-donkey.jpg"
                 loading="lazy"
                 alt="Ein Bild eines blauen Esels auf Aquarell" />
+
+            <img class="four-grid-cells"
+                src="pictures/g-lasi-sre.jpg"
+                alt="Lisa am Basteln auf einer Wiese"
+                loading="lazy"
+             />
+
+          
 
             <img
                 src="pictures/g-material.jpg"
@@ -330,15 +234,24 @@ btn.addEventListener("click", () => {
                 src="pictures/g-splatter.jpg"
                 loading="lazy"
                 alt="Spritzer beim Aktionpainting auf einem Blatt Papier" />
-            <img
-                src="pictures/g-coffee.jpg"
+       
+             <img
+                src="pictures/t-tree.jpg"
                 loading="lazy"
-                alt="Muster auf der Oberfläche eines Espressokaffeetäschens" />
+                alt="Ein dunkler Baum mit lich das durchscheint" />
+             <img
+                src="pictures/t-chalk.jpg"
+                loading="lazy"
+                alt="Blätter im Wald auf dem Boden zu einem Herz geformt" />
 
             <img
                 src="pictures/g-water-greenhouse.jpg"
                 loading="lazy"
                 alt="Ein Gewächshausbild in Aquarell" />
+            <img
+                src="pictures/g-coffee.jpg"
+                loading="lazy"
+                alt="Muster auf der Oberfläche eines Espressokaffeetäschens" />
 
             <img
                 src="pictures/g-landart.jpg"
@@ -347,16 +260,18 @@ btn.addEventListener("click", () => {
             <img
                 src="pictures/g-dreamcatcher.jpg"
                 loading="lazy"
-                alt="Ein Ausschnitt eines Traumfängers" />
+                alt="Ein Ausschnitt eines Traumfängers"
+                id="dream"
+                 />
 
             <img
-                src="pictures/g-tree.jpg"
+                src="pictures/t-jesus.jpg"
                 loading="lazy"
                 alt="Lichtblicke durch die Krone eines Baumes" />
 
 
             <img
-                src="pictures/g-spooky-man.jpg"
+                src="pictures/g-face-brown.jpg"
                 loading="lazy"
                 alt="Blätter im Wald auf dem Boden zu einem Herz geformt" />
 
@@ -365,15 +280,19 @@ btn.addEventListener("click", () => {
                 loading="lazy"
                 alt="Blätter im Wald auf dem Boden zu einem Herz geformt" />
 
-            <img
-                src="pictures/g-langenhard.jpg"
+
+             <img
+                src="pictures/g-spooky-man.jpg"
                 loading="lazy"
                 alt="Blätter im Wald auf dem Boden zu einem Herz geformt" />
 
-             <img
-                src="pictures/g-face-brown.jpg"
+                 
+            <img
+                src="pictures/wood-sculpture.jpg"
                 loading="lazy"
                 alt="Blätter im Wald auf dem Boden zu einem Herz geformt" />
+
+            
 
         </div>
 
@@ -455,5 +374,19 @@ btn.addEventListener("click", () => {
 <p class="copyright">© 2026 Kreative Lebensberatung</p>
 
 <script src="script.js"></script>
+ <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- Cookie Banner -->
+    <link rel="stylesheet" href="cookiebanner.style.css">
+    <script src="cookiebanner.script.js"></script>
+    <style>
+        *{margin:0;padding:0;text-decoration:none;list-style:none;box-sizing:border-box;}
+    </style>
+    <script>
+        $(document).ready(function() {
+            cookieBanner.init();
+        });
+    </script>
 </body>
 </html>

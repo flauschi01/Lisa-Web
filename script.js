@@ -1,28 +1,33 @@
-function toggleMenu() {
-  document.getElementById("menu").classList.toggle("active");
-  document.querySelector(".burger").classList.toggle("active");
-}
+const menu = document.getElementById("menu");
+const burger = document.querySelector(".burger");
 
+burger.addEventListener("click", (e) => {
+  e.stopPropagation();
+
+  menu.classList.toggle("active");
+  burger.classList.toggle("active");
+});
+
+menu.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+document.addEventListener("click", (e) => {
+
+  // Nur schließen wenn außerhalb geklickt wurde
+  if (
+    !menu.contains(e.target) &&
+    !burger.contains(e.target)
+  ) {
+    menu.classList.remove("active");
+    burger.classList.remove("active");
+  }
+});
 
 function scrollToSection() {
   document.getElementById("about").scrollIntoView({
     behavior: "smooth"
   });
-}
-function toggleMenu() {
-  const menu = document.getElementById("menu");
-  const burger = document.querySelector(".burger");
-
-  menu.classList.remove("active");
-  burger.classList.remove("active");
-}
-
-document.onclick = function(e){
-    if (e.target.id !== 'menu' && e.target.id !== 'burger')
-{
-      menu.classList.toggle("active");
-  burger.classList.toggle("active");
-}
 }
 const farben = [
       { 
@@ -115,8 +120,15 @@ btn.addEventListener("click", () => {
       container.appendChild(btn);
     });
 
-const link = document.getElementById("phone-link");
-  const number = link.dataset.number;
-  link.href = "tel:" + number;
-    
+document.querySelectorAll(".phone-link").forEach(link => {
 
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const number =
+      ["+49", "155", "674", "045", "79"].join("");
+
+    window.location.href = "tel:" + number;
+  });
+
+});

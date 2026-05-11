@@ -372,7 +372,7 @@ section {
     #lasi .about-content{
         max-width: 2000px;
         background-image: url('pictures/canvas.jpg');
-        border-radius: 15px; 
+        s
 }
     .portrait{
         justify-content: center;
@@ -968,7 +968,11 @@ footer .col p{
 color: var(--sage);
 font-size: 20px;
 }
-
+.phone-row{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 #uber{
 padding-right: 4em; 
 }

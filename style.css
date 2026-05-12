@@ -87,7 +87,7 @@ body {
 
 /* Weißer Hintergrund */
 section {
-  padding: 60px 20px;
+  padding: 60px 0px;
   scroll-margin-top: 220px;
   
 }
@@ -422,7 +422,8 @@ section {
     .about-content {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 40px;
+        padding: 40px;
+gap: 0;
         text-align: center;
         background: var(--yellow-light);    
     }
@@ -431,10 +432,13 @@ section {
         box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         background: var(--yellow);
         color: white;
+        padding: 15px 25px;
+        
 }
     .about-light p {
         background: var(--eggshell);
         color: var(--dark-sage);
+        font-size: 20px;
         padding: 10px 40px;
         text-align: left;
         max-width: 1600px;
@@ -448,7 +452,7 @@ section {
         color: var(--dark-sage);
         background: var(--eggshell);
         position:relative;
-        font-size: 25px;
+        font-size: 20px;
         width: 100%;
         padding: 10px 40px;
         max-width: 1600px;
@@ -456,9 +460,12 @@ section {
         border-radius: 5%; 
         box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+#oranges{
+    max-width: 80%;
+}
 
     #langenhard{
-        width: 350px;
+        width: 300px;
         margin: 10px 10px 10px 20px;
 }
     #kind{
@@ -874,7 +881,7 @@ button, .farb-btn {
   }
 
 .section_light{
-    padding: 10px;
+
     background: var(--yellow-light);
 }
 

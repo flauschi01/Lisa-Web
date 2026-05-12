@@ -912,7 +912,7 @@ img{
 
   .gallery {
     column-count: 2;
-    column-gap: 5px;
+    column-gap: 10px;
   }
 
   .gallery img {
@@ -927,9 +927,6 @@ img{
 #dream
 }
 
-#greenhouse{
-    height: 280px;
-}
 
 /*Ende Media*/
 

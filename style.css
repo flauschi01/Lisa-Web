@@ -625,6 +625,8 @@ section {
         border-radius: 12px;
         display: block;
         transition: transform 0.3s ease;
+        break-inside: avoid; 
+        
 }
 
     .gallery img:hover {
@@ -912,7 +914,7 @@ img{
 
   .gallery {
     column-count: 2;
-    column-gap: 10px;
+    column-gap: 5px;
   }
 
   .gallery img {
@@ -927,7 +929,19 @@ img{
 #dream
 }
 
+@media screen and (max-width: 414px) {
 
+  .gallery{
+    column-count: 2;
+    column-gap: 8px;
+  }
+
+  .gallery img{
+    margin-bottom: 8px;
+    border-radius: 8px;
+  }
+
+}
 /*Ende Media*/
 
  .about-dark,
@@ -946,19 +960,7 @@ font-size: 12px;
 .copyright{
 font-size: 18px;
 }
-@media screen and (min-width: 414px) and (max-width: 415px) {
 
-  .gallery{
-    gap: 8px;
-  }
-
-  .gallery img{
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-
-}
 
 /* Hero Grundstruktur */
 

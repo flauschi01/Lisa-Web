@@ -382,12 +382,11 @@ section {
 .portrait img{
         max-height: 600px;
         padding: 20px;
-        border-radius: 10%;
+        
 }
 
     .description {
     text-align: left;
-    color: white;
     margin-top: 20px;
     max-width: 860px;
 }
@@ -928,6 +927,10 @@ img{
 #dream
 }
 
+#greenhouse{
+    height: 220px;
+}
+
 /*Ende Media*/
 
  .about-dark,
@@ -983,6 +986,11 @@ font-size: 20px;
   display: flex;
   align-items: center;
   gap: 10px;
+  
+}
+
+.phone-row img{
+    padding-top: 6px;
 }
 #contact{
 

@@ -76,23 +76,89 @@
 
 
     </section>
-<!-- Lasi
-    <section id="lasi">
-    <div class="about-content">
-    <div class="portrait">
+
+   
+
+    <section class="about-content">
+            <div class="button-wrapper">
+            <h1>Schön, dass du da bist!</h1>
+            </div>
+  <div class="portrait">
         <img src="pictures/übermich-s2-lasi-atelier.jpg" alt="Ein Bild von Lisa in ihrem Atelier wie sie lächelnd zwischen Staffelei und Farbe an ihrer Töpferscheibe." loading="lazy">
        </div>
         <div class="description">
-            <h2>Wer bin ich?</h2>
-            <p>Hier steht dann der Text den sich Lisa ausdenkt und dann einfügen kann. Ich hoffe mal das klappt alles so, wie wir uns das vorstellen. Naja, wenn nicht müssen wir einfach nochmal ran an den Speck.</p>
+            <p>Hier findest du einen Raum für alle deine <br>
+            Gefühle in jeder Lebenssituation. <br>
+            Ich biete dir unterschiedliche <br>
+            Möglichkeiten und Angebote um deinen <br>
+            eigenen Kreativen Ausdruck zu finden, <br>
+            neue Perspektiven einzunehmen und <br>
+            dich zu transformieren.<br>
+            <br>
+            Melde dich ganz unverbindlich!<br>
+            <br>
+            Ich freue mich auf dich &#128522;
+            <br>
+            <br>
+      
+            </p>
+            <a href="#" class="main-btn">Aktuelles Angebot</a>
         </div>
-        
-        </div>
+      
+</section>
+
     </section>
- -->
-    <section id="about" class="about-content">
-            <div class="button-wrapper">
-            <h1>Schön, dass du da bist!</h1>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2>Meine Angebote</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Einzelstündle</h3>
+            <a href="#"><p>Individuelle Begleitung <br> für deine Themen.</p>
+            <img src="pictures/k-art-supply.jpg" loading="lazy">
+            </a>
+          </div>
+          <div class="card">
+            <h3>Gruppenangebot</h3>
+            <a href="#"><p>Lerne flexibel und <br> in deinem Tempo.</p>
+            <img src="pictures/gr-hug.jpg" loading="lazy">
+            </a>
+          </div>
+          <div class="card">
+            <h3>Schnupperkurs</h3>
+            <a href="#"><p>Entfalte deinen Ausdruck durch Kunst.</p>
+            <img src="pictures/ss-chandelier.jpg" loading="lazy">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section >
+
+    <!-- Spiel -->
+    <section class="game">
+
+      <h1>Testspiel</h1>
+        <p>Hallo, du<br>
+        Lust auf ein kleines Kennenlernspiel?<br>
+        Magst du mir deine <b>Lieblingsfarbe</b> verraten? <br>
+        Ich verspreche dir, anhand dieser etwas über dich herausfinden und erzählen zu können!<br><br><br>
+        </p>
+      
+      <div class="farben-container" id="farbenContainer">
+        <!-- Buttons werden per JS eingefügt -->
+      </div>
+
+      <div id="textfenster">
+        <h2 id="farbName"></h2>
+        <p><span class="label"><b>Eigenschaften:</b></span> <span id="eigenschaften"></span></p>
+        <p><span class="label"><b>Assoziationen:</b></span> <span id="assoziationen"></span></p>
+      </div>
+
+
+
+
+<section  id="about" class="about-content">
             </div>
         
             <div class="about-light">
@@ -154,54 +220,7 @@
     </section>
 
 
-    <!-- Spiel -->
-    <section class="game">
 
-      <h1>Testspiel</h1>
-        <p>Hallo, du<br>
-        Lust auf ein kleines Kennenlernspiel?<br>
-        Magst du mir deine <b>Lieblingsfarbe</b> verraten? <br>
-        Ich verspreche dir, anhand dieser etwas über dich herausfinden und erzählen zu können!<br><br><br>
-        </p>
-      
-      <div class="farben-container" id="farbenContainer">
-        <!-- Buttons werden per JS eingefügt -->
-      </div>
-
-      <div id="textfenster">
-        <h2 id="farbName"></h2>
-        <p><span class="label"><b>Eigenschaften:</b></span> <span id="eigenschaften"></span></p>
-        <p><span class="label"><b>Assoziationen:</b></span> <span id="assoziationen"></span></p>
-      </div>
-
-
-    </section>
-
-    <section id="services" class="section">
-      <div class="container">
-        <h2>Meine Angebote</h2>
-        <div class="cards">
-          <div class="card">
-            <h3>Einzelstündle</h3>
-            <a href="#"><p>Individuelle Begleitung <br> für deine Themen.</p>
-            <img src="pictures/k-art-supply.jpg" loading="lazy">
-            </a>
-          </div>
-          <div class="card">
-            <h3>Gruppenangebot</h3>
-            <a href="#"><p>Lerne flexibel und <br> in deinem Tempo.</p>
-            <img src="pictures/gr-hug.jpg" loading="lazy">
-            </a>
-          </div>
-          <div class="card">
-            <h3>Schnupperkurs</h3>
-            <a href="#"><p>Entfalte deinen Ausdruck durch Kunst.</p>
-            <img src="pictures/ss-chandelier.jpg" loading="lazy">
-            </a>
-          </div>
-        </div>
-      </div>
-    </section >
 
     <section class="banner">
 
@@ -262,7 +281,8 @@
                 <img
                     src="pictures/g-water-greenhouse.jpg"
                     loading="lazy"
-                    alt="Ein Gewächshausbild in Aquarell" />
+                    alt="Ein Gewächshausbild in Aquarell" 
+                    id="greenhouse"                                                    />
                 <img
                     src="pictures/g-coffee.jpg"
                     loading="lazy"
@@ -348,7 +368,7 @@
 
         <footer class="section-p2">
             <div class="col" id="contact">
-                <img src="logo" alt="">
+             
                 <h4>Kontakt</h4>
                 <p><strong>E-Mail Adresse:</strong> lichtblick_hilfe@web.de</p>
                 <div class="phone-row">
@@ -366,7 +386,7 @@
                 <div class="col">
                  <h4>Folge mir</h4>
                     <div class="icon">
-                        <i class="fa fa-facebook-f"></i>
+                        <i class="fa fa-whatsapp"></i>
                         <i class="fa fa-instagram"></i>
                         <!--<i class="fa fa-youtube"></i>-->
                     </div>
@@ -389,9 +409,9 @@
      
     </footer>
      
-    <p class="copyright">© 2026 Kreative Lebensberatung</p>
+    <p class="copyright">© 2026 Lichtblick - Deine kreative Alltagsstütze</p>
 
-  <script src="script.js?v=2"></script>
+    <script src="script.js"></script>
      <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         

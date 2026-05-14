@@ -391,6 +391,9 @@ section {
     max-width: 860px;
     color: var(--dark-sage)
 }
+.btn{
+    padding-top: 20px;
+}
 
     .main-btn {
         margin: 20px auto;
@@ -759,6 +762,15 @@ html {
   .header-bar {
     display: none;
   }
+.col{
+    width:370px
+}
+
+#contact,
+#uber,
+#follow{
+    padding-top: 20px;
+}
 }
 
 @media (max-width: 768px) {
@@ -892,6 +904,7 @@ footer{
     flex-direction: column;
     column-count: 1;
 }
+
 img{
  max-width: 100%;
   height: auto;
@@ -950,9 +963,7 @@ img{
     margin-bottom: 8px;
     border-radius: 8px;
   }
-#uber{
-    padding-bottom: 20px;
-}
+
 .about-content{
     padding: 10px;
 }
@@ -1030,7 +1041,7 @@ font-size: 20px;
     padding-top: 6px;
 }
 #contact{
-
+padding right:4em;
 }
 #uber{
 padding-right: 4em; 

@@ -132,3 +132,13 @@ document.querySelectorAll(".phone-link").forEach(link => {
   });
 
 });
+
+const user = "lichtblick_hilfe";
+const domain = "web.de";
+
+const email = user + "@" + domain;
+
+const mailLink = document.getElementById("email");
+
+mailLink.href = "mailto:" + email;
+mailLink.textContent = email;

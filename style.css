@@ -227,17 +227,20 @@ section {
       #navbar {
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
+    
 }
 
 }
     #navbar a{
-        padding: 15px 35px;
+        padding: 15px 35px 15px 15px;
         font-family: 'myfont2', serif;
         font-size: 35px;
         text-decoration: none;
         color: var(--dark-sage);
         border-radius: 10%;
         white-space: nowrap;
+        min-width: 210px;
+        text-align: center;
 }
 
     #navbar a:hover{
@@ -361,6 +364,9 @@ section {
       padding: 60px 20px;
       scroll-margin-top: 100px;
 }
+.section h3 {
+    font-size: 32px;
+}
 
     .section.light {
       background: #f9f6f2;
@@ -396,8 +402,8 @@ section {
 }
 
     .main-btn {
-        margin: 20px auto;
-        padding: 20px 30px;
+        margin: 20px -20px;
+        padding: 20px 30px 20px 25px;
         border: 2px solid var(--yellow);
         background: none;
         font-size: 2rem;
@@ -487,6 +493,12 @@ gap: 0;
     object-fit: cover;
     break-inside: avoid;
 }
+
+
+.highlight{
+    font-size: 2rem;
+    font-weight: bold;
+}
     .text-icon{
         float: right;
         width: 250px;
@@ -570,7 +582,9 @@ gap: 0;
       margin: 6px 0;
       line-height: 1.5;
     }
-
+    #avi{
+        bottom: -30px;
+}
     .label {
       font-weight: 600;
     }
@@ -593,6 +607,7 @@ gap: 0;
     .cards p{
         text-decoration: none;
         color: var(--dark-sage);
+    padding-bottom: 10px;
 }
         .cards img{
         width: 100%;
@@ -771,6 +786,9 @@ html {
 #follow{
     padding-top: 20px;
 }
+#follow{
+padding-right: 20px;
+}
 }
 
 @media (max-width: 768px) {
@@ -888,6 +906,11 @@ button, .farb-btn {
     font-size: 18px;
     
   }
+#oranges{
+width: 150px;
+margin-top: -20px;;
+}
+
 .button-wrapper {
     display: flex;
     justify-content: center;
@@ -910,7 +933,13 @@ img{
   height: auto;
   display: block;
 }
-
+#bird{
+    position: sticky;
+    right:10px;
+    bottom:200px;
+    padding-left: 200px;
+    max-width: 10%
+}  
 }
 
 @media (max-width: 480px) {
@@ -1049,7 +1078,11 @@ padding-right: 4em;
 #account{
   padding-right: 40px;
 }
-    
+#bird{
+    position: sticky;
+    bottom: 400px;
+    right: 0px;
+}  
 
 .follow{
     padding-top: 20px;

@@ -1,3 +1,17 @@
+const toggle = document.getElementById('contrast-toggle');
+
+toggle.addEventListener('click', () => {
+
+  const current = document.documentElement.dataset.theme;
+
+  if (current === 'contrast') {
+    document.documentElement.dataset.theme = '';
+  } else {
+    document.documentElement.dataset.theme = 'contrast';
+  }
+
+});
+
 const menu = document.getElementById("menu");
 const burger = document.querySelector(".burger");
 

@@ -4,6 +4,19 @@
     --dark-sage: #6e8970;
     --yellow: #fab42d;
     --yellow-light:#fdf6d8;
+    --white: #fff;
+    --outline:#ff990010;
+}
+
+[data-theme="contrast"] {
+     --eggshell: #000;
+    --sage: #fff;
+    --dark-sage: #fff;
+    --yellow: #ffd700;
+    --yellow-light: #111;
+    --white: #000;
+    --outline:#fab42d;
+
 }
 
 /*Debug Linien
@@ -84,14 +97,35 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
 }
+/* Fokus Outlines */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 3px solid var(--outline);
+  outline-offset: 4px;
+}
 
 /* Weißer Hintergrund */
 section {
   padding: 60px 0px;
   scroll-margin-top: 220px;
+    background: var(--white);
   
 }
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: black;
+  color: white;
+  padding: 1rem;
+  z-index: 999;
+}
 
+.skip-link:focus {
+  left: 20px;
+}
 /* Burger */
 .burger {
   position: fixed;
@@ -138,16 +172,19 @@ section {
           z-index: 1002;
           font-family: 'myfont2', 'Arial', sans-serif; 
 }
-
+    #menub{
+    max-width:1400px;
+}
     #menu a {
         
         display: block;
         padding: 15px 25px;
         text-decoration: none;
-        color: #333;
+        color: var(--dark-sage);
 }
     #menu.active {
         right: 0;
+        
 }
     #phone{
         position: absolute;
@@ -164,7 +201,16 @@ section {
     .burger.active span:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
 }
+    #contrast-toggle{
+    margin-left: 10px;
+    color: var(--dark-sage);
+    border: none;
+    min-width:40px;
+   
+   
+    
 
+}
     .container {
         max-width: 1200px;
         width: 100%;
@@ -198,7 +244,11 @@ section {
         text-decoration: none;
         border-radius: 50%;
         position: sticky;
-        color: black;
+        color: var(--dark-sage);
+}
+    .social{
+    padding-right: 3rem;
+        
 }
     .social a{
         font-size: 2em;
@@ -210,6 +260,7 @@ section {
 }
     .title{
         padding-left: 1em;
+        padding-right: 3em;
 }
     .title img{
         padding: 1.5rem 2rem;
@@ -369,7 +420,7 @@ section {
 }
 
     .section.light {
-      background: #f9f6f2;
+      background: var(--yellow-light);
 }
 
 
@@ -441,7 +492,7 @@ gap: 0;
     #about .main-btn{
         box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         background: var(--yellow);
-        color: white;
+        color: var(--white);
         padding: 15px 25px;
         
 }
@@ -546,6 +597,7 @@ gap: 0;
     width: 100%;
     text-align: center;
     padding-bottom: 30px;
+    background: var(--white);
     }
 
     .farben-container {
@@ -672,7 +724,7 @@ gap: 0;
     .quote {
         text-align: center;
         font-style: italic;
-        background: #efe7df;
+        background: var(--eggshell);
         position:relative;
         font-size: 25px; 
 }
@@ -712,9 +764,9 @@ blockquote{
         margin-top: 20px;
         padding: 5px 10px;
         border-style: solid;
-        border-color: #fab42d;
+        border-color: var(--yellow);
         background: none;
-        color: #fab42d;
+        color: var(--yellow);
         cursor: pointer;
         border-radius: 30px;
 }
@@ -724,7 +776,7 @@ blockquote{
         margin-top: 20px;
         padding: 5px 10px;
         border-style: solid;
-        border-color: #fab42d;
+        border-color: var(--yellow);
         cursor: pointer;
 }
     #submit:hover {
@@ -750,6 +802,9 @@ html {
   }
 
 }
+
+
+
 @media (hover: hover) {
   .farb-btn:hover {
     transform: scale(1.08);
@@ -760,6 +815,11 @@ html {
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  video {
+    display: none;
   }
 }
 @media (hover: none) {
@@ -926,6 +986,7 @@ footer{
     padding-top: 20px;
     flex-direction: column;
     column-count: 1;
+    background: var(--white);
 }
 
 img{
@@ -1032,11 +1093,12 @@ font-size: 18px;
 
 
 .section-p2{
-background-image: url('hintergrund.jpg');
+
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: cover;
 padding: 20px;
+background-color: var(--white);
 }
 
 
@@ -1098,5 +1160,9 @@ text-align: center;
 padding-bottom: 20px;
 margin-top: 40px;
 color: var(--dark-sage)
+}
+
+#access{
+    display: none;
 }
 

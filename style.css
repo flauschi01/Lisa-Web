@@ -6,6 +6,7 @@
     --yellow-light:#fdf6d8;
     --white: #fff;
     --outline:#ff990010;
+    --darker-sage: #39473A;
 }
 
 [data-theme="contrast"] {
@@ -259,7 +260,7 @@ section {
       transform: translateY(-5px);
 }
     .title{
-        padding-left: 1em;
+        
         padding-right: 3em;
 }
     .title img{

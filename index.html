@@ -42,26 +42,28 @@
         
         <a id="phone" href="#" class="phone-link fa fa-phone"><p>Ruf einfach an!</p></a>
     </nav>
-
         <!--Header-->
             <header>
         <!--Social Media Links-->
      <div class="container header-inner" id="menub">
         <div class="social-header" >     
-        <div class="social">
-         <a onclick="audioPlay()" class="fa fa-volume-up" style="font-size:46px; color:var(--darker-sage);">
-            <audio>
-              <source src="horse.ogg" type="audio/ogg">
-              <source src="horse.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-            </audio>
-            </a>   
-        <a href="#" class="fa fa-whatsapp"></a>
+   <div class="social">
+        <i id="icon1" 
+           aria-label="Play Audio Description Track 1" 
+           onclick="toggleAudio()" 
+           class="fa fa-volume-up" 
+           style="font-size:46px; color: var(--darker-sage); cursor: pointer;">
+        </i>  
 
-            <a href="#" class="fa fa-instagram"></a>
-            
-            
-            <a href="#" class="phone-link fa fa-phone"></a>
+        <audio id="myAudio1">
+          <source src="audio1.ogg" type="audio/ogg">
+          <source src="horse.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <a href="#" class="fa fa-whatsapp"></a> 
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="phone-link fa fa-phone"></a>
+
         </div>
         <!--Logo-->
         <div class ="title">
@@ -69,7 +71,7 @@
         </div>
         <!--Desktop-Navigation-->
         <div class="header-bar">
-        <nav id="navbar" aria-la        bel="Desktop Navigation">
+        <nav id="navbar" aria-label="Desktop Navigation">
             <a href="#services">Angebote</a>
             <a href="#text">Über mich</a>
             <a href="#contact">Kontakt</a>
@@ -77,9 +79,7 @@
         </nav>
         </div>
             </header>
-
-
-        <!--Video-->
+    <!--Video-->
     <section class="hero">
         <!-- Video Hintergrund -->
       <video autoplay muted loop playsinline webkit-playsinline preload="auto" 
@@ -136,6 +136,7 @@
         <!--Angebote-->
     <section id="services" class="section">
       <div class="container">
+
         <h2>Meine Angebote</h2>
 
         <div class="cards">
@@ -194,7 +195,21 @@
             <div class="about-dark">
 
             <p>
-     <span class="highlight">Na, du?</span>     
+     <span class="highlight">Na, du?
+        <i id="icon2" 
+           aria-label="Play Audio Description Track 2" 
+           onclick="toggleAudio()" 
+           class="fa fa-volume-up" 
+           style="font-size:46px; color: var(--darker-sage); cursor: pointer;">
+        </i>  
+
+        <audio id="myAudio2">
+          <source src="audio2.ogg" type="audio/ogg">
+          <source src="horse.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+
+   </span>     
            <br><img id="avi" class="text-icon" src="pictures/sp-avi.jpg" alt="Kind das mit Farben auf Leinwand malt" loading="lazy">
             Geht's dir grade auch so bescheiden?
 
@@ -400,8 +415,20 @@ Und mal ehrlich, was gibt es auch Wichtigeres und Heilsameres in der Welt als Li
 Während Ausbildungen und Studium durfte ich mich bereits innerhalb verschiedenster pädagogischer, therapeutischer und künstlerischer Methodiken und Materialien ausprobieren -<br> zeigen und weitergeben möchte ich hier jedoch vor allem die Erkenntnisse und Erfahrungen aus der Praxis meines ganzheitlichen Lebens, <br>die ich innerhalb unterschiedlicher, hilfreicher Programme selbst für uns zusammengefasst habe.
     Um dabei wirklich Wachstum und Entwicklung ermöglichen zu können, soll das hier ein freiheitlicher Raum sein und bleiben,<br>   in dem du selbst ganz unabhängig deine Termine, Bedürfnisse und Wünsche gestalten kannst.<br>  
 Während ich dich sehe, entsprechend auf deinem Weg begleite, unterstütze und dir an die Hand gebe was du gerade brauchst - <br>  
-genau so, wie es eben speziell für uns beide funktioniert.<br>   
-<br>  
+genau so, wie es eben speziell für uns beide funktioniert.<i id="icon3" 
+           aria-label="Play Audio Description Track 3" 
+           onclick="toggleAudio()" 
+           class="fa fa-volume-up" 
+           style="font-size:46px; color: var(--darker-sage); cursor: pointer;">
+        </i>  
+
+        <audio id="myAudio3">
+          <source src="audio3.ogg" type="audio/ogg">
+          <source src="horse.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+ <br>   
+
 Indem wir zusammen deinen ganz eigenen Ausdruck für deine ganz individuelle Situation finden und ihn uns aus verschiedenen Blickwinkeln gemeinsam anschauen und transformieren.<br>  
 <br>  
 Teamwork also 😉 - alles darf und nichts muss!<br>  
@@ -500,6 +527,7 @@ Ich freue mich sehr auf dich !<br>
     <p class="copyright">© 2026 Lichtblick - Deine kreative Alltagsstütze</p>
 
     <script src="script.js"></script>
+
      <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         

@@ -1,16 +1,70 @@
-const toggle = document.getElementById('contrast-toggle');
+function toggleAudio() {
+    var audio = document.getElementById("myAudio1");
+    var icon = document.getElementById("icon1");
+        
 
-toggle.addEventListener('click', () => {
 
-  const current = document.documentElement.dataset.theme;
+    if (audio.paused) {
+        audio.play();
+        // FontAwesome 4 Klassen für Pause
+        icon.className = "fa fa-pause"; 
+    } else {
+        audio.pause();
+        // FontAwesome 4 Klassen für Lautsprecher
+        icon.className = "fa fa-volume-up"; 
+    }
+}
 
-  if (current === 'contrast') {
-    document.documentElement.dataset.theme = '';
-  } else {
-    document.documentElement.dataset.theme = 'contrast';
-  }
-
+// Automatisches Zurücksetzen am Ende des Audios (ebenfalls für Version 4 angepasst)
+document.getElementById("myAudio1").addEventListener("ended", function() {
+    document.getElementById("icon1").className = "fa fa-volume-up";
 });
+
+
+function toggleAudio() {
+    var audio2 = document.getElementById("myAudio2");
+    var icon2 = document.getElementById("icon2");
+        
+
+
+    if (audio2.paused) {
+        audio2.play();
+        // FontAwesome 4 Klassen für Pause
+        icon2.className = "fa fa-pause"; 
+    } else {
+        audio2.pause();
+        // FontAwesome 4 Klassen für Lautsprecher
+        icon2.className = "fa fa-volume-up"; 
+    }
+}
+
+// Automatisches Zurücksetzen am Ende des Audios (ebenfalls für Version 4 angepasst)
+document.getElementById("myAudio2").addEventListener("ended", function() {
+    document.getElementById("icon2").className = "fa fa-volume-up";
+});
+
+function toggleAudio() {
+    var audio3 = document.getElementById("myAudio3");
+    var icon3 = document.getElementById("icon3");
+        
+
+
+    if (audio3.paused) {
+        audio3.play();
+        // FontAwesome 4 Klassen für Pause
+        icon3.className = "fa fa-pause"; 
+    } else {
+        audio3.pause();
+        // FontAwesome 4 Klassen für Lautsprecher
+        icon3.className = "fa fa-volume-up"; 
+    }
+}
+
+// Automatisches Zurücksetzen am Ende des Audios (ebenfalls für Version 4 angepasst)
+document.getElementById("myAudio3").addEventListener("ended", function() {
+    document.getElementById("icon3").className = "fa fa-volume-up";
+});
+
 
 const menu = document.getElementById("menu");
 const burger = document.querySelector(".burger");
@@ -113,7 +167,7 @@ Deine Stabilität wirkt beruhigend auf dein Umfeld und dein Zuhause lädt jederz
   btn.appendChild(img);
       btn.setAttribute("aria-label", farbe.name);
 
-btn.addEventListener("click", () => {
+   btn.addEventListener("click", () => {
         // Alten aktiven Button zurücksetzen
         if (aktiverButton) aktiverButton.classList.remove("aktiv");
         

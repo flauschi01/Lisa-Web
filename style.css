@@ -249,12 +249,16 @@ section {
 }
     .social{
     padding-right: 3rem;
+    z-index:1000;
         
 }
     .social a{
         font-size: 2em;
         padding: 10px 30px;
        
+}
+.social i{
+        width: 2em;
 }
     .social a:hover {
       transform: translateY(-5px);
@@ -1166,4 +1170,3 @@ color: var(--dark-sage)
 #access{
     display: none;
 }
-

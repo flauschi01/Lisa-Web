@@ -917,8 +917,8 @@ button, .farb-btn {
   align-items: center;
   justify-content: flex-start;
   padding-left: 0 !important;
-  padding.right: 1rem;   /* Verhindert Container-Abstand links */
-  margin-left: 0 !important;    /* Verhindert Container-Abstand links */
+    padding-right: 0 !important;
+    margin-left: 0 !important;    /* Verhindert Container-Abstand links */
 }
 
 .social > a {

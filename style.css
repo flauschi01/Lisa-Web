@@ -914,6 +914,7 @@ button, .farb-btn {
 
   .social {
     display: flex; 
+    justify-content: flex-start;
     align-items: center;
   }
 
@@ -924,6 +925,7 @@ button, .farb-btn {
  
     .social #icon1 {
     display: inline-block;
+    margin: 15px 15px 15px 5px;
     visibility: visible;
     opacity: 1;
   }

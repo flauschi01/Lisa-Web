@@ -912,17 +912,27 @@ button, .farb-btn {
     max-width: 200px;
 }
 
-  .header-bar {
-    display: none;
+  .social {
+    display: flex; 
+    align-items: center;
   }
 
-#icon1 {
-    display: block;
+    .social > a {
+        display: none;
+    }
+
+ 
+    .social #icon1 {
+    display: inline-block;
+    margin: 15px; 
+    visibility: visible;
+    opacity: 1;
+  }
+
+.header-bar{
+    display: none;
 }
 
-  .social {
-    display: none;
-  }
     .social-header {
     align-items: center;
     min-height: 60px;

@@ -916,6 +916,10 @@ button, .farb-btn {
     display: none;
   }
 
+#icon1 {
+    display: block;
+}
+
   .social {
     display: none;
   }

@@ -85,7 +85,7 @@ h1{
 
 
     p {
-    font-size: clamp(16px, 2vw, 25px);
+    font-size: clamp(20px, 2vw, 25px);
 }
 
     a{
@@ -862,7 +862,7 @@ html {
   -webkit-overflow-scrolling: touch;
 }
 p {
-  font-size: clamp(16px, 2.5vw, 25px);
+  font-size: clamp(20px, 2.5vw, 25px);
 }
 .container {
   min-width: 0;
@@ -911,14 +911,13 @@ button, .farb-btn {
 .gallery img{
     max-width: 200px;
 }
-
 .social {
   display: flex; 
   align-items: center;
   justify-content: flex-start;
   padding-left: 0 !important;
     padding-right: 0 !important;
-    margin-left: 0 !important;    /* Verhindert Container-Abstand links */
+    margin-left: 0 !important;    
 }
 
 .social > a {
@@ -984,7 +983,7 @@ button, .farb-btn {
   .about-light p,
   .about-dark p {
     padding: 20px;
-    font-size: 18px;
+    font-size: 20px;
     
   }
 #oranges{
@@ -1095,7 +1094,7 @@ img{
  .about-dark,
  .about-light {
     padding: 10px;
-    font-size: 15px;
+    font-size: 20px;
   }
 
 

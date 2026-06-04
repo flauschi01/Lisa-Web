@@ -867,6 +867,10 @@ p {
 .container {
   min-width: 0;
 }
+.section{
+scroll-margin-top: 20px;
+}
+
 
   header {
     padding: 4px 10px;
